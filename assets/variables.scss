@@ -1,0 +1,9 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 600px,
+  'md': 960px,
+  'lg': 1440px - 24px,
+  'xl': 1920px - 24px
+);

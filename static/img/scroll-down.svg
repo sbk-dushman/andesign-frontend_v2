@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="41" viewBox="0 0 14 41">
+  <g id="Outline_Devices_Mouse" data-name="Outline / Devices /Mouse" transform="translate(-5.25 -2.324)">
+    <g id="Mouse" transform="translate(5.25 2.324)">
+      <path id="Shape" d="M7,20a7.009,7.009,0,0,1-5.322-2.444A6.967,6.967,0,0,1,0,13.024V6.976a7,7,0,0,1,14,0v6.048a6.984,6.984,0,0,1-5.908,6.891A7.068,7.068,0,0,1,7,20ZM1.556,8.708v4.316a5.444,5.444,0,0,0,10.888,0V8.708Zm6.222-7.1V7.158h4.667V6.976a5.432,5.432,0,0,0-4.595-5.36l-.036-.006Zm-1.555,0-.036.006-.036.006a5.432,5.432,0,0,0-4.595,5.36v.181H6.223Z" fill="#5f6a75"/>
+    </g>
+  </g>
+  <g id="Arrow_down" data-name="Arrow down" transform="translate(-5.25 22.25)">
+    <g id="Arrow_down-2" data-name="Arrow down" transform="translate(7.25 5.75)">
+      <path id="Path" d="M5.789,10.439,8.652,7.72a.819.819,0,0,1,1.116,0,.724.724,0,0,1,0,1.061l-4.211,4a.819.819,0,0,1-1.116,0l-4.211-4a.724.724,0,0,1,0-1.061.819.819,0,0,1,1.116,0l2.863,2.72V.75a.791.791,0,0,1,1.579,0Z" transform="translate(0)" fill="#5f6a75"/>
+    </g>
+  </g>
+</svg>
