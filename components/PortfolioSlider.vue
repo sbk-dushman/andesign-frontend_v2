@@ -97,7 +97,7 @@
           depressed
           elevation="0"
           color="andeLightGray"
-          class="view-button"
+          class="view-button view-case-btn_slide"
           @click="openCaseViewer"
         >&nbsp;</v-btn>
       </div>
@@ -169,6 +169,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/mixins.scss";
+
 
 .slider-container {
   padding: 0;
@@ -332,6 +333,12 @@ export default {
       .v-btn--disabled {
         opacity: 0.25;
       }
+
+.view-case-btn_slide{
+  &:focus::before, &:hover::before {
+         top: -1px;
+        }
+}
     }
   }
 }

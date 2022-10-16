@@ -264,7 +264,7 @@ export default {
     }
 
     .view-button:after {
-      padding-top: .9em;
+      padding-top: .6em;
       content: url(/img/close_white.svg);
     }
   }
