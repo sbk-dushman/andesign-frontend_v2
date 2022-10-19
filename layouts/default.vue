@@ -7,7 +7,7 @@
     <v-main
       id="main"
     >
-      <span class="descr andeGray--text">Группа визуальных коммуникаций</span>
+      <span class="descr andeGray--text">Визуальные коммуникации</span>
       <v-btn
             v-scroll="onScroll"
             v-show="showToTop"

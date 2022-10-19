@@ -18,13 +18,13 @@
           <p
             class="andeOrange--text"
           >
-            ГРУППА<br/>ВИЗУАЛЬНЫХ<br/>КОММУНИКАЦИЙ
+          ВИЗУАЛЬНЫЕ<br/>КОММУНИКАЦИИ
           </p>
           <v-spacer/>
           <p
             class="copyright white--text d-none d-md-block"
           >
-            © ООО "ЭндиЗайн", 2004 - 2021
+            © ООО "ЭндиЗайн", 2003 - 2023
           </p>
         </v-col>
         <v-col
