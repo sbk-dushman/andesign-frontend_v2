@@ -8,19 +8,46 @@
           cols="12"
           md="3"
           offset-lg="1"
+          class="footer-left-coll"
         >
           <nuxt-link
             exact
             to="/"
           >
-            <app-icon :brand="brand" fill1="#fff" fill2="#fff" height="30" width="120"></app-icon>
+            <app-icon :brand="brand" fill1="#fff" fill2="#fff" height="50" width="120"></app-icon>
           </nuxt-link>
-          <p
-            class="andeOrange--text"
-          >
-          ВИЗУАЛЬНЫЕ<br/>КОММУНИКАЦИИ
-          </p>
-          <v-spacer/>
+         
+          <v-list>
+            <v-list-item
+          
+            >
+              <ul
+             class="footer__company-list andeOrange--text company-list"
+              >
+                <li class="company-list__item">
+                ВСК-групп
+              </li>
+              <li class="company-list__item">АСТ-групп</li>
+              <li class="company-list__item">ЭндиЗайн мебель</li>
+              <li class="company-list__item">ЛигаСтрой</li>
+              <li class="company-list__item">ЭндиЗайн строй</li>
+              <li class="company-list__item">РегионСтрой</li>
+              </ul>
+            </v-list-item>
+          </v-list>
+          <h5 class="partners__title ">И наши партнеры</h5>
+          
+          <v-list>
+            <v-list-item>
+              <ul class="partners-list">
+                <li class="partners-list__item">ММ Строй</li>
+                <li class="partners-list__item">Arch Professional</li>
+                <li class="partners-list__item">Zlt</li>
+                <li class="partners-list__item">Altercasa</li>
+              </ul>
+
+            </v-list-item>
+          </v-list>
           <p
             class="copyright white--text d-none d-md-block"
           >
@@ -66,11 +93,11 @@
             ПОИСК
           </p>
           <app-search />
-          <v-spacer/>
+       
           <p
             class="copyright white--text d-block d-md-none mt-8"
           >
-            © ООО "ЭндиЗайн", 2004 - 2021
+            © ООО "ЭндиЗайн", 2003 - 2023
           </p>
         </v-col>
         <v-col
@@ -199,6 +226,7 @@ footer {
         font-size: .875em;
         font-weight: 600;
       }
+    
 
       .v-list {
         background: transparent;
@@ -227,7 +255,7 @@ footer {
             list-style: none;
             padding-left: 0;
 
-            a {
+            a  {
               font-weight: 300;
               text-transform: capitalize;
               line-height: 1.4;
@@ -235,7 +263,23 @@ footer {
           }
         }
       }
-
+      .company-list,.partners-list__item{
+              font-weight: 300;
+              text-transform: capitalize;
+              line-height: 1.4;
+              font-size: 0.875em;
+      }
+      .partners-list__item{
+        color: #fff;
+        line-height: 2;
+      }
+      .partners__title{
+        color: #fff;
+        text-transform: uppercase;
+    font-size: 0.875em;
+        font-weight: 600;
+      }
+  
       .search-form {
         width: 100%;
       }
@@ -275,7 +319,9 @@ footer {
         }
       }
     }
-
+    .footer-left-coll{
+        justify-content: space-around;
+      }
     .social {
       display: flex;
       flex-direction: column;
@@ -347,6 +393,7 @@ footer {
         text-transform: uppercase;
       }
     }
+
   }
 }
 </style>
