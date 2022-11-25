@@ -14,7 +14,7 @@
             exact
             to="/"
           >
-            <app-icon :brand="brand" fill1="#fff" fill2="#fff" height="50" width="120"></app-icon>
+            <app-icon :brand="brand" fill1="#fff" fill2="#fff" height="50" width="115"></app-icon>
           </nuxt-link>
          
           <v-list>
@@ -320,7 +320,7 @@ footer {
       }
     }
     .footer-left-coll{
-        justify-content: space-around;
+        justify-content: space-between;
       }
     .social {
       display: flex;

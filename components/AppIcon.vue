@@ -1,4 +1,5 @@
 <template>
+
  <svg id="_3132568615072" xmlns="http://www.w3.org/2000/svg" 
     :height="height"
     :width="width"
@@ -35,6 +36,7 @@ export default {
     height: {
       type: String,
       default: "69"
+      // default: "66"
     },
     width: {
       type: String,
