@@ -47,10 +47,22 @@
               >
                 <div
                   style="max-width:24em"
-                >
-                  <h3
-                    v-html="pCase.title.rendered"
-                  />
+                > 
+                <div class="title-group">
+                        <h3
+                                        v-html="pCase.title.rendered"
+                                      />
+                                      <v-btn
+                      fab
+                      depressed
+                      elevation="0"
+                      color="andeLightGray"
+                      class="view-button view-case-btn_slide"
+                      @click="openCaseViewer"
+                    >&nbsp;</v-btn>
+                </div>
+             
+                
                   <p
                     v-if="pCase.acf.media[0].caption"
                     v-html="pCase.acf.media[0].caption"
@@ -92,14 +104,7 @@
           @click="nextSlide"
           ref="nextButton"
         >&nbsp;</v-btn>
-        <v-btn
-          fab
-          depressed
-          elevation="0"
-          color="andeLightGray"
-          class="view-button view-case-btn_slide"
-          @click="openCaseViewer"
-        >&nbsp;</v-btn>
+    
       </div>
     </v-col>
   </v-row>
@@ -334,12 +339,19 @@ export default {
         opacity: 0.25;
       }
 
-.view-case-btn_slide{
-  &:focus::before, &:hover::before {
-         top: -1px;
+        .view-case-btn_slide{
+          &:focus::before, &:hover::before {
+                top: -1px;
+                }
+            
         }
-}
     }
+    .title-group{
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+    }
+
   }
 }
 </style>
