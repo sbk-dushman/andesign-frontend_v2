@@ -33,6 +33,8 @@
                 class="ps-1 pe-sm-4"
               >
                   <v-img
+                  class="case-img"
+                  @click="openCaseViewer"
                     contain
                     :src="pCase.acf.media[0].sizes['case-img']"
                     ref="caseImg"
@@ -210,7 +212,7 @@ export default {
             font-weight: 400;
             text-transform: uppercase;
             color: var(--v-andeOrange-base);
-            margin-bottom: 1em;
+            // margin-bottom: 1em;
             white-space: normal;
           
           }
@@ -257,7 +259,7 @@ export default {
 
     .nav-buttons {
 
-      width: 150px;
+      width: 120px;
       display: flex;
       justify-content: space-between;
 
@@ -350,7 +352,40 @@ export default {
         display: flex;
         align-items: center;
         vertical-align: middle;
-    }
+        & h3{
+          margin-right: 10px;
+        }
+      }
+      .case-img{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &::before{
+    content: url("/img/eye.svg");
+    background: #d97535 center center no-repeat;
+    background-position: -14px 0px;
+    background-size: cover;
+    transition: 0.4s all 0.2s ease-in;
+    height: 42px;
+    width: 42px;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 5px;
+    position: absolute;           
+   top: 50%;                     
+   transform: translate(0, -50%);  
+   opacity: 0;
+        }
+        }
+        .case-img:hover::before{
+          opacity: 1;
+      }
 
   }
 }

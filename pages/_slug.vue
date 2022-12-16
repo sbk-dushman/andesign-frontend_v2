@@ -497,7 +497,7 @@ div.category.individual {
         .v-input{
           
           @media only screen and (min-width: 1424px) {
-            padding-left: calc(50% - 6em);
+            // padding-left: calc(50% - 6em);
           }
 
           .v-label {
