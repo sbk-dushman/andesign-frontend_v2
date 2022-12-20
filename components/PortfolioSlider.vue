@@ -259,7 +259,7 @@ export default {
 
     .nav-buttons {
 
-      width: 120px;
+      width: 100px;
       display: flex;
       justify-content: space-between;
 

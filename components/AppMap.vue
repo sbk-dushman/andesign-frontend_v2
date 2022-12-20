@@ -122,7 +122,7 @@
                   max-width="80%"
                   aspect-ratio="1"
                   contain
-                  class="mx-auto mt-3"
+                  class="mx-auto mt-3 mb-3"
                 />
               </v-col>
             </v-row>

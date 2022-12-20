@@ -154,7 +154,7 @@
       </v-row>
       <v-row>
         <v-col
-          cols="10"
+          cols="9"
           offset-md="2"
           md="9"
           lg="12"
@@ -163,8 +163,8 @@
           <v-row>
             <v-col 
               v-for="(service, index) in services" :key="service.descr"
-              cols="6"
-              md="2"
+              cols="12"
+              md="12"
               lg="1"
               :offset-lg="index === 0 ? 2 : 0"
               class="comp"
@@ -582,6 +582,7 @@ section.masthead {
 
   .comp {
     line-height: 1.4;
+    min-width: 10%;
   
     .comp-num {
       font-size: 1.6875em;
@@ -781,12 +782,12 @@ section.masthead {
         width: 56px;
         height: 56px;
         border-radius: 9999px;
-        padding: 10px 20px;
+        padding: 14px 18px;
       }
 
       .prev-button::after {
         content: url("/img/back.svg");
-        padding: 10px 8px;
+        padding: 15px 11px;
       }
 
       .next-button:hover::after, .prev-button:hover::after {
