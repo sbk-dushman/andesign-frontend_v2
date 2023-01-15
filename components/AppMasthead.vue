@@ -1,4 +1,5 @@
 <template>
+  
   <section class="masthead" id="masthead">
     <v-container
       fluid
@@ -237,11 +238,21 @@
       <v-row
         class="d-none d-md-flex"
       >
-        <v-col 
-          cols="12"
+        <v-col
+        cols="12"
           md="1"
           offset-md="2">
-          <span class="scroll-down">прокрутите<br />вниз</span>
+        <!-- <v-btn
+        
+        > -->
+          <span class="scroll-down" v-scroll-to="{ 
+          el: '#footer', 
+          duration: 600,
+          easing: 'ease-out', 
+          
+          }"
+      >прокрутите<br />вниз</span>
+        <!-- </v-btn> -->
         </v-col>
       </v-row>
     </v-container>
@@ -599,7 +610,10 @@ section.masthead {
     font-size: 0.875em;
     color: var(--v-andeTeal-base);
     position: relative;
-
+    cursor: pointer;    
+    opacity: 1;
+  transition: 0.3s ease-in;
+      transition-property: opacity;
     &:before {
       content: url("/img/scroll-down.svg");
       display: block;
@@ -607,7 +621,10 @@ section.masthead {
       left: -2em;
       top: .5em;
     }
+    &:hover {
+      opacity: 0.5;
   }
+}
 
   .fun-facts-container {
     overflow: hidden;
