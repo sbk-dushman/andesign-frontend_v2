@@ -61,7 +61,7 @@ export default {
 <style lang="scss" scoped>
   svg {
     vertical-align: middle;
-    margin-top: 3px;
+    margin-top: .5em;
     margin-right: .5em;
     margin-bottom: .5em;
 

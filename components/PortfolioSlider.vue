@@ -375,14 +375,31 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    // position: relative;
     padding-top: 5px;
-    position: absolute;           
-   top: 50%;                     
-   transform: translate(0, -50%);  
+    position: absolute; 
+    right: 2%;          
+   bottom:  2%;                     
+  //  transform: translate(0, -50%);  
    opacity: 0;
+
+
+   @media only screen and (min-width: 960px) {
+          // top: 86%; 
         }
+    @media only screen and (min-width: 670px) {
+  bottom: 3%;
+      }
+      @media only screen and (max-width: 375px) {
+  right: 3% !important;
+  bottom: 7% !important;
+      }
+      @media only screen and (max-width: 375px) {
+  right: 11% !important;
+  bottom: 10% !important;
+      }
         }
+      }
         .case-img:hover::before{
           opacity: 1;
       }
