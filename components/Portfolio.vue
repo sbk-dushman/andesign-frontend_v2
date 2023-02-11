@@ -301,6 +301,8 @@ section.portfolio {
 
     .category-icon {
       width: 1.1em;
+      position: relative;
+      right: -12px;
     }
 
     .subcategories {

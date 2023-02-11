@@ -28,12 +28,13 @@
               left: () => nextSlide(),
               right: () => prevSlide(),
             }"
-            class="d-flex px-3"
+            class="d-flex px-13"
           >
             <v-img
               :src="image.url"
               class="mx-auto"
               contain
+              
               :max-height="($vuetify.breakpoint.xs || $vuetify.breakpoint.sm) ? 'calc(80vh - 2em)' : 'calc(100vh - 2em)'"
               :max-width="($vuetify.breakpoint.xs || $vuetify.breakpoint.sm) ? 'calc(100vw - 2em)': 'calc(60vw - 2em)'"
             />
@@ -157,7 +158,7 @@ export default {
 
     .slider-wrapper{
       touch-action: auto !important;
-      transition: ease 0.2s;
+      transition: ease 0.8s;
 
       .v-sheet {
         background: 0 0;
