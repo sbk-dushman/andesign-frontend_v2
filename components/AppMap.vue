@@ -118,7 +118,7 @@
                 class="d-none d-md-flex"
               >
                 <v-img
-                  src="/img/qrcode1617815155.png"
+                  src="/img/qrcode.jpg"
                   max-width="80%"
                   aspect-ratio="1"
                   contain
