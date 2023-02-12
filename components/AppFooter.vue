@@ -79,6 +79,7 @@
                   :key="child.slug"
                 >
                   <nuxt-link
+                  class="footer-link"
                     :to="{ name: 'slug', params: { slug: category.slug, option: child.id } }" 
                   >
                     {{ child.name }}
@@ -207,7 +208,9 @@ footer {
   position: relative;
   background: radial-gradient(circle at 100% 0, #5F6A75, #151D24 25%);
   overflow: hidden;
+  
 
+    
   .container {
     padding: 2.5em 1.25em;
     @media only screen and (min-width: 960px) {
@@ -215,7 +218,6 @@ footer {
         padding: 2.5em 4em;
       }
     }
-
     .col-12 {
       display: flex;
       flex-direction: column;
@@ -226,7 +228,7 @@ footer {
         font-size: .875em;
         font-weight: 600;
       }
-    
+
 
       .v-list {
         background: transparent;
@@ -260,9 +262,16 @@ footer {
               text-transform: capitalize;
               line-height: 1.4;
             }
+            .footer-link{
+        transition: .2s color .2s ease-out;
+        &:hover{
+          color: #e8af64;
+       }
+      } 
           }
         }
       }
+   
       .company-list,.partners-list__item{
               font-weight: 300;
               text-transform: capitalize;
