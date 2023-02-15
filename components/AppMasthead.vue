@@ -168,7 +168,7 @@
               md="12"
               lg="1"
               :offset-lg="index === 0 ? 2 : 0"
-              class="comp"
+              class="comp comp-bg"
             >
             <span class="with-dot extrude-dot font-weight-black comp-num"
                 v-html="index < 9 ? '0' + (index + 1) : index + 1"
@@ -594,6 +594,9 @@ section.masthead {
   .comp {
     line-height: 1.4;
     min-width: 10%;
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+    background-color: rgba(246, 251, 251, 0.5)!important;
   
     .comp-num {
       font-size: 1.6875em;
@@ -602,7 +605,9 @@ section.masthead {
         bottom: 0.33em;
         left: -0.33em;
         width: calc(100% + 0.66em);
+
       }
+
     }
   }
 
