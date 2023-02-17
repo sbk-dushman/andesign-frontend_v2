@@ -14,12 +14,13 @@
             fab
             dark
             fixed
+            
             :top = "!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
             :bottom = "($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
             :left = "!($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
             :right = "($vuetify.breakpoint.xs || $vuetify.breakpoint.sm)"
             color="andeOrange"
-            style="margin-top:7em; margin-left: 3em; margin-right:.25em"
+            class="to-top"
             @click="toTop"
           >
               <svg xmlns="http://www.w3.org/2000/svg" width="24.528" height="15.567" viewBox="0 0 24.528 15.567">
@@ -130,6 +131,11 @@ h1 {
     float: none;
     margin: .5em auto 1em;
 }
+.to-top{
+  margin-top: 85vh ;
+  margin-left: 2em;
+  margin-right:.25em;
+}
 
 .alignright {
     float: right;
@@ -215,6 +221,7 @@ hr {
 .with-dot.ease-width:before {
   transition: .1s width .3s ease;
 }
+
 
 .with-dot.ease-width:hover:before, .nuxt-link-active:before, .with-dot.dot-active.ease-width:before, .with-dot.extrude-dot:before {
   width: calc(100% + .6em);
@@ -339,5 +346,7 @@ span.descr {
 .v-slide-group__next, .v-slide-group__prev {
   display: none;
 }
+
+
 
 </style>
