@@ -121,7 +121,6 @@
               </svg>
             </v-btn>
           </a> -->
-            <!-- ссылка тг -->
           
           <!-- <a
             href="https://www.instagram.com/ande_sign_2004/"

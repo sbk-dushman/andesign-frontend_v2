@@ -122,7 +122,7 @@
                   max-width="80%"
                   aspect-ratio="1"
                   contain
-                  class="mx-auto mt-3 mb-3"
+                  class="mx-auto mt-3 mb-3 qr"
                 />
               </v-col>
             </v-row>
@@ -239,9 +239,14 @@ export default {
           display: flex;
     flex-direction: column;
     align-items: center;
+        }
+        @media only screen and (max-width: 960px) {
+          .qr{
+            margin-bottom: 24px  !important;
+          }
 
         }
-
+       
       h2 {
         font-size: 2.375em;
         max-width: 5em;
@@ -249,10 +254,14 @@ export default {
         text-transform: uppercase;
         margin:0;
   
-        @media only screen and (min-width: 960px) {
+        @media only screen and (max-width: 960px) {
           font-size: 2.4375em;
           max-width: 9em;
 
+        }
+        @media only screen and (max-width: 768px) {
+          font-size: 2em;
+          max-width: 5em;
         }
       }
 
@@ -260,11 +269,18 @@ export default {
         margin: 0 -12px 12px 0;
         width: 12em;
   
-        @media only screen and (min-width: 960px) {
+        @media only screen and (max-width: 960px) {
           width: 21em;
         }
+        @media only screen and (max-width: 768px) {
+          width: 10.5em;
+        }
       }
-
+      @media only screen and (max-width: 768px) {
+          .qr{
+          display: none !important;
+          }
+        }
       .contacts-info {
         max-width: 18em;
   
