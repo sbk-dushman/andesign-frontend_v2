@@ -122,11 +122,15 @@
             </v-btn>
           </a> -->
             <!-- ссылка тг -->
-          <a
-        
+          
+          <!-- <a
             href="https://www.instagram.com/ande_sign_2004/"
             target="_blank"
-          >
+          > -->
+                 <a
+            href="https://t.me/+a8P9JSM74AUyZjNi/"
+            target="_blank"
+            >
             <v-btn
               fab
               width="42px"
@@ -211,7 +215,7 @@
             </v-btn>
           </a> -->
           <a
-            href="https://www.instagram.com/ande_sign_2004/"
+          href="https://t.me/+a8P9JSM74AUyZjNi/"
             target="_blank"
           >
             <v-btn

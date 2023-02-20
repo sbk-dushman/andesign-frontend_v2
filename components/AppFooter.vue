@@ -116,11 +116,15 @@
           offset-lg="1"
           class="social d-none d-lg-flex"
         >
-        <!-- ссылка тг -->
-          <a 
+     
+          <!-- <a 
             href="https://ru-ru.facebook.com/profile.php?id=100004352977996"
             target="_blank"
-          >
+          > -->
+          <a 
+            href="https://t.me/+a8P9JSM74AUyZjNi"
+            target="_blank"
+          > 
             <v-btn
               fab
               width="42px"

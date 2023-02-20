@@ -115,7 +115,7 @@
               </v-col>
               <v-col
                 md="6"
-                class="d-none d-md-flex"
+                class="d-md-flex"
               >
                 <v-img
                   src="/img/qrcode.jpg"
@@ -234,8 +234,12 @@ export default {
       padding-bottom:2em;
       pointer-events: auto;
   
-        @media only screen and (min-width: 960px) {
+        @media only screen and (max-width: 960px) {
           padding-bottom:4em;
+          display: flex;
+    flex-direction: column;
+    align-items: center;
+
         }
 
       h2 {
@@ -246,7 +250,9 @@ export default {
         margin:0;
   
         @media only screen and (min-width: 960px) {
-          font-size: 3.4375em;
+          font-size: 2.4375em;
+          max-width: 9em;
+
         }
       }
 
@@ -255,7 +261,7 @@ export default {
         width: 12em;
   
         @media only screen and (min-width: 960px) {
-          width: 18em;
+          width: 21em;
         }
       }
 
