@@ -88,7 +88,7 @@
                 :md="(categoryChildren.length ? 3 : 6) * (page.acf.top_right? 2 : 1)"
                 :lg="(categoryChildren.length ? 2 : 4) * (page.acf.top_right? 2 : 1)"
                 offset-md="1"
-                :offset-lg="!categoryChildren.length ? 2 : ''"
+                :offset-lg="!categoryChildren.length ? 1 : ''"
                 v-html="page.acf.prologue || category.description.replace(/(?:\r\n|\r|\n)/g, '<br />')"
                 class="mb-0"
               >
@@ -96,7 +96,7 @@
             </v-row>
             <v-row>
               <v-col
-                :offset="page.acf.top_right? 4: 2"
+                :offset="page.acf.top_right? 2: 1"
               >
                 <v-btn
                   v-if="page.acf.order_button[0]"
@@ -164,9 +164,14 @@
             class="service mt-8 mb-8 mb-lg-16 d-flex flex-column"
           >
             <v-row>
-              <v-col
+              <!-- <v-col
                 :offset-md="((index+1)%2)*2"
-              >
+              старый
+              -->
+            <v-col
+                :offset-md="2"
+                >
+
                 <hr
                   v-if="index <= 1"
                   width="45px"
@@ -179,15 +184,20 @@
               </v-col>
             </v-row>
             <v-row>
+              <!-- <v-col
+              :offset-md="((index+1)%2)*2 + 2" -->
               <v-col
-                :offset-md="((index+1)%2)*2 + 2"
+              :offset-md="2"
                 v-html="service.description"
                 />
             </v-row>
             <v-row
               class="price">
-              <v-col
+              <!-- <v-col
                 :offset-md="((index+1)%2)*2 + 2"
+              > -->
+              <v-col
+                :offset-md="2"
               >
               от
               <p v-html="service.price" />
@@ -197,9 +207,13 @@
             <v-spacer />
             <v-row
               class="align-end">
-              <v-col
+              <!-- <v-col
                 md="2"
                 :offset-md="((index+1)%2)*2 + 2"
+              > -->
+              <v-col
+                md="2"
+                :offset-md="2"
               >
                 <div class="mb-4 mb-lg-6 d-flex flex-row justify-end justify-md-start">
                   <hr
@@ -264,7 +278,7 @@
                 class="mb-0"
                 v-html="pCase.acf.description"
               />
-              <div class="mt-12 d-flex flex-row justify-center">
+              <div class="mt-12 d-flex flex-row justify-start">
                 <hr
                   width="7px"
                   class="andeLightGray mr-1 ml-16"
@@ -458,7 +472,7 @@ div.category.individual {
 
   h2,h3 {
     font-size: 3.4375em;
-    @include fluid-type(font-size, 1280px, 1920px, 20px, 55px);
+    @include fluid-type(font-size, 1280px, 1920px, 20px, 46px);
     font-weight: 300;
     text-transform: uppercase;
     padding-right: 3em;
@@ -584,7 +598,7 @@ div.category.individual {
       font-weight: 300;
       text-transform: uppercase;
       margin-bottom: 1em;
-      @include fluid-type(font-size, 1280px, 1920px, 20px, 55px);
+      @include fluid-type(font-size, 1280px, 1920px, 20px, 48px);
     }
     
     ul {
@@ -657,7 +671,7 @@ div.category.individual {
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 1em;
-        @include fluid-type(font-size, 1280px, 1920px, 20px, 55px);
+        @include fluid-type(font-size, 1280px, 1920px, 20px, 46px);
       }
     }
 
