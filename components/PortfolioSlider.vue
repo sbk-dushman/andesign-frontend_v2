@@ -376,7 +376,7 @@ export default {
     justify-content: center;
     align-items: center;
     // position: relative;
-    padding-top: 5px;
+    padding-top: 6px;
     position: absolute; 
     right: 2%;          
    bottom:  2%;                     

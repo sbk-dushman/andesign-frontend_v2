@@ -280,7 +280,8 @@ hr {
     background: url("/img/eye_back2.svg") center bottom no-repeat;
     background-size: cover;
     transition: .4s all .2s ease-in;
-    padding-top: .975em;
+    // padding-top: .975em;
+    padding-top: .950em;
     top: -200%;
   }
 

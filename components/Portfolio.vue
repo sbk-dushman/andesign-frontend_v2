@@ -63,13 +63,14 @@
                   v-html="category.description.replace(/(?:\r\n|\r|\n)/g, '<br />')"
                 />
                 <div
-                  class="mt-12 d-none d-md-flex flex-row justify-center"
+                  class="mt-12 d-none d-md-flex flex-row justify-start"
                   v-if="index !== parentCategories.length - 1"
                 >
                   <hr
                     width="7px"
-                    class="andeLightGray mr-1 ml-16"
+                   class="andeLightGray mr-1 ml-4"  
                   >
+                  <!-- 16 -->
                   <hr
                     width="45px"
                     class="andeLightGray"
