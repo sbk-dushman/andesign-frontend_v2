@@ -79,6 +79,8 @@
         color="white"
         type="submit"
         class="white--text view-button order-button"
+     
+        
       >
         Отправить
       </v-btn>
@@ -94,14 +96,14 @@
       </v-file-input>
       <div
         v-if="inDialog"
-        class="close-button"
+        class=" close-button form"
       >
         <v-btn
           fab
           depressed
           elevation="0"
           color="andeLightGray"
-          class="view-button"
+          class="view-button form-close__btn"
           @click="close()"
         >&nbsp;</v-btn>
       </div>
@@ -217,6 +219,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 form.order-form {
   vertical-align: middle;
   position: relative;
@@ -263,6 +266,7 @@ form.order-form {
       content: url("/img/mail.svg");
       background: url("/img/mail_back2.svg") center bottom no-repeat;
       background-size: cover;
+  
     }
   }
 
@@ -386,5 +390,10 @@ form.order-form {
       content: url(/img/close_white.svg);
     }
   }
+  .form-close__btn:hover:after{
+    padding-top: 0.5em  !important;
+  }
+
+
 }
 </style>

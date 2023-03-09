@@ -180,6 +180,7 @@
                 <h2
                   v-html="service.title"
                   class="mb-4"
+            
                 />
               </v-col>
             </v-row>
