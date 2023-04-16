@@ -32,9 +32,10 @@
               <v-col
                 class="ps-1 pe-sm-4"
               >
+              /**@click="openCaseViewer"*/
                   <v-img
                   class="case-img"
-                  @click="openCaseViewer"
+                 
                     contain
                     :src="pCase.acf.media[0].sizes['case-img']"
                     ref="caseImg"
@@ -357,7 +358,7 @@ export default {
         }
       }
       .case-img{
-        cursor: pointer;
+        // cursor: pointer;
         position: relative;
         display: flex;
         justify-content: center;
@@ -401,7 +402,7 @@ export default {
         }
       }
         .case-img:hover::before{
-          opacity: 1;
+          // opacity: 1;
       }
 
   }
