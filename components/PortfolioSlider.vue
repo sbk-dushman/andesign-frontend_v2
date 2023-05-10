@@ -32,10 +32,10 @@
               <v-col
                 class="ps-1 pe-sm-4"
               >
-              /**@click="openCaseViewer"*/
+              
                   <v-img
                   class="case-img"
-                 
+                  @click="openCaseViewer(pCase.id)"
                     contain
                     :src="pCase.acf.media[0].sizes['case-img']"
                     ref="caseImg"
@@ -61,7 +61,7 @@
                       elevation="0"
                       color="andeLightGray"
                       class="view-button view-case-btn_slide"
-                      @click="openCaseViewer"
+                      @click="openCaseViewer(pCase.id)"
                     >&nbsp;</v-btn>
                 </div>
              
@@ -141,6 +141,7 @@ export default {
     pCases () {
       return this.$store.state.pCases.filter( pCase => pCase.categories.includes(this.category) )
     },
+   
   },
   created() {
   },
@@ -168,8 +169,8 @@ export default {
       }
       return
     },
-    openCaseViewer() {
-      this.$nuxt.$emit('open-case-viewer', this.pCases[this.slide])
+    openCaseViewer(resp) {
+      this.$nuxt.$emit('open-case-viewer', this.pCases[this.pCases.findIndex(pCase => pCase.id === resp)])
     },
   }
 };
@@ -358,7 +359,7 @@ export default {
         }
       }
       .case-img{
-        // cursor: pointer;
+        cursor: pointer;
         position: relative;
         display: flex;
         justify-content: center;
@@ -402,7 +403,7 @@ export default {
         }
       }
         .case-img:hover::before{
-          // opacity: 1;
+          opacity: 1;
       }
 
   }
