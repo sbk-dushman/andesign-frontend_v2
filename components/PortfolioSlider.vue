@@ -368,7 +368,7 @@ export default {
     background: #d97535 center center no-repeat;
     background-position: -14px 0px;
     background-size: cover;
-    transition: 0.4s all 0.2s ease-in;
+    transition: 0.3s all 0.2s ease-in;
     height: 42px;
     width: 42px;
     font-size: 1em;
@@ -380,9 +380,10 @@ export default {
     // position: relative;
     padding-top: 6px;
     position: absolute; 
-    right: 2%;          
-   bottom:  2%;                     
-  //  transform: translate(0, -50%);  
+    right: 50%;  
+    top: 50%;        
+   bottom:  0;                     
+   transform: translate(0, -50%);  
    opacity: 0;
 
 

@@ -72,10 +72,17 @@ export default {
       transform: translateY(-7.447px);
     }
   }
-
+  @media only screen and (max-width: 960px) {
+    svg {
+      margin-top: 3em;
+    margin-right: 3em;
+    margin-bottom: 2em;
+    }
+  }
   @media only screen and (max-width: 600px) {
     svg {
       width: 91px;
     }
   }
+
 </style>

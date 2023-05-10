@@ -329,10 +329,10 @@ span.descr {
     height: 2.954em;
 }
   
-@media only screen and (min-width: 960px) {
+@media only screen and (max-width: 960px) {
   span.descr {
-    top: 13em;
-    left: 3em;
+    top: 9em !important;
+    // left: 3em;
   }
 }
 

@@ -606,9 +606,14 @@ section.masthead {
   .comp {
     line-height: 1.4;
     min-width: 10%;
-    // -webkit-backdrop-filter: blur(10px);
-    // backdrop-filter: blur(10px);
-    background-color: rgba(246, 251, 251, 0.5)!important;
+    // // -webkit-backdrop-filter: blur(10px);
+    // // backdrop-filter: blur(10px);
+    // background-color: rgba(246, 251, 251, 0.5)!important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(246,251,251,.5);
+    transition: background-color .5s cubic-bezier(1,0,0,1);
+
   
     .comp-num {
       font-size: 1.6875em;

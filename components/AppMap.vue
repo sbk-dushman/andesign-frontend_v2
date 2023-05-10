@@ -233,6 +233,7 @@ export default {
       padding-top: 2em;
       padding-bottom:2em;
       pointer-events: auto;
+      
   
         @media only screen and (max-width: 960px) {
           padding-bottom:4em;
@@ -253,6 +254,12 @@ export default {
         font-weight: 300;
         text-transform: uppercase;
         margin:0;
+        // background-color:#e37b3c;
+            -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius:5%;
+    background-color: rgba(255, 255, 255, 0.151);
+    transition: background-color .5s cubic-bezier(1,0,0,1);
   
         @media only screen and (max-width: 960px) {
           font-size: 2.4375em;

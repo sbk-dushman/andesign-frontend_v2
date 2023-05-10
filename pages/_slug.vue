@@ -279,15 +279,15 @@
                 class="mb-0"
                 v-html="pCase.acf.description"
               />
-              <div class="mt-12 d-flex flex-row justify-start">
-                <hr
+              <div  class="mt-12 d-flex flex-row justify-start">
+                <!-- <hr
                   width="7px"
                   class="andeLightGray mr-1 ml-16"
                 >
                 <hr
                   width="45px"
                   class="andeLightGray"
-                >
+                > -->
               </div>
             </div>
           </v-col>

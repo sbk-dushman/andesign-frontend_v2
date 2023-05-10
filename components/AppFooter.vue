@@ -22,7 +22,7 @@
           
             >
               <ul
-             class="footer__company-list andeOrange--text company-list"
+             class="footer__company-list  company-list"
               >
                 <li class="company-list__item">
                 ВСК-групп
@@ -275,7 +275,7 @@ footer {
             .footer-link{
         transition: .2s color .2s ease-out;
         &:hover{
-          color: #e8af64;
+          color: #ff8200;
        }
       } 
           }
@@ -285,11 +285,16 @@ footer {
     width: 26px;
     fill: rgb(95, 106, 117);
   }
+
       .company-list,.partners-list__item{
               font-weight: 300;
               text-transform: capitalize;
               line-height: 1.4;
               font-size: 0.875em;
+      }
+      .company-list{
+        // color: #d97535;
+        color:#ff8200
       }
       .partners-list__item{
         color: #fff;
