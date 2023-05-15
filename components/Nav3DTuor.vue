@@ -24,7 +24,7 @@
               </g>
             </svg>
           </span>
-          <span
+          <span @click="tourPages()"
             class="white--text d-none d-md-inline"
           >3d туры</span>
         </div>
@@ -60,6 +60,11 @@ export default {
     return {
       toggled: false,
       focused: false
+    }
+  },
+  methods: {
+    tourPages() {
+      return console.log(this.$store.state.menus);
     }
   },
   computed: {

@@ -7,6 +7,7 @@ export const state = () => ({
   tags: [],
   pages: [],
   mainPage: [],
+  menus:[]
 })
 
 export const mutations = {
@@ -21,6 +22,9 @@ export const mutations = {
   },
   updatePCases: (state, pCases) => {
     state.pCases = pCases
+  },
+  updateMenus: (state, menus) => {
+    state.menus = menus
   },
   updateCategories: (state, categories) => {
     state.categories = categories
@@ -97,6 +101,34 @@ export const actions = {
       console.log(err)
     }
   },
+  // new 
+  
+  async getTourMenu ({ state, commit, dispatch }) {
+    if (state.menus.length) return
+
+    try {
+      let menus = await fetch(
+        `${siteURL}/wp-json/wp/v2/tour-menu`
+      ).then(res => res.json())
+
+      menus = menus
+        .map(({ db_id, type_label, title, url , target, attr_title, description, }) => ({
+          db_id,
+          type_label,
+          title,
+          url,
+          target,
+          attr_title,
+          description
+        }))
+
+      commit("updateMenus", menus)
+    } catch (err) {
+      console.log(err)
+    }
+  },
+
+  // nwe
   async getTags ({ state, commit }) {
     if (state.tags.length) return
 

@@ -24,7 +24,7 @@
               </g>
             </svg>
           </span>
-          <span
+          <span 
             class="white--text d-none d-md-inline"
           >Презентации</span>
         </div>
@@ -66,6 +66,7 @@ export default {
     pagesWithPresentations() {
       return this.$store.state.pages.filter( page => page.acf.file )
     }
+    
   }
 };
 </script>
