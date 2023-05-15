@@ -24,7 +24,7 @@
               </g>
             </svg>
           </span>
-          <span @click="tourPages()"
+          <span  @click.stop="showTour"
             class="white--text d-none d-md-inline"
           >3d туры</span>
         </div>
@@ -36,14 +36,13 @@
         class="presentations-list tuor-list"
       >
         <v-list-item
-          v-for="page in pagesWithPresentations"
-          :key="page.id"
-          :href="page.acf.file"
+          v-for="tour in tourMenu"
+          :key="tour.id"
           target="_blank"
           class="text-uppercase"
         >
           <span>
-            {{ page.title.rendered }}
+            {{ tour.title }}
           </span>
         </v-list-item>
       </v-list>
@@ -65,11 +64,17 @@ export default {
   methods: {
     tourPages() {
       return console.log(this.$store.state.menus);
-    }
+    },
+    showTour() {
+      this.$nuxt.$emit('open-dialog', 'tour-modal')
+    },
   },
   computed: {
     pagesWithPresentations() {
       return this.$store.state.pages.filter( page => page.acf.file )
+    }
+    , tourMenu() {
+      return this.$store.state.menus;
     }
   }
 };

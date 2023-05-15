@@ -31,7 +31,9 @@
       <app-map />
       <app-footer :categories="categories" />
     </v-main>
+    <modal-component componentName="tuor-modal" :dark="true" />
     <keep-alive>
+      
       <modal-component componentName="order-form" :componentProps="{allowUpload: true}" :dark="true" />
     </keep-alive>
   </v-app>
