@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="3d-modals">
   <h1>Мох!!</h1>
       >
         <v-btn

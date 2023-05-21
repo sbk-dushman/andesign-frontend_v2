@@ -24,7 +24,7 @@
               </g>
             </svg>
           </span>
-          <span  @click.stop="showTour"
+          <span  
             class="white--text d-none d-md-inline"
           >3d туры</span>
         </div>
@@ -41,7 +41,7 @@
           target="_blank"
           class="text-uppercase"
         >
-          <span>
+          <span @click.stop="showTour(tour.url)">
             {{ tour.title }}
           </span>
         </v-list-item>
@@ -65,9 +65,10 @@ export default {
     tourPages() {
       return console.log(this.$store.state.menus);
     },
-    showTour() {
-      this.$nuxt.$emit('open-dialog', 'tour-modal')
+    showTour(tuorUrl) {
+      this.$nuxt.$emit('open-dialog', 'tuor-modal', {src: tuorUrl})
     },
+    
   },
   computed: {
     pagesWithPresentations() {
