@@ -66,7 +66,7 @@ export default {
       return console.log(this.$store.state.menus);
     },
     showTour(tuorUrl) {
-      this.$nuxt.$emit('open-dialog', 'tuor-modal', {src: tuorUrl})
+      this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl})
     },
     
   },

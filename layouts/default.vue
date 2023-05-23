@@ -31,10 +31,11 @@
       <app-map />
       <app-footer :categories="categories" />
     </v-main>
-    <modal-component componentName="tuor-modal" :componentProps="{somedata: '1'}" :dark="true" />
     <keep-alive>
-      
-      <modal-component componentName="order-form" :componentProps="{allowUpload: true}" :dark="true" />
+    <modal-component componentName="tour-modal" maxWidth="80%"   :dark="true" />
+  </keep-alive>
+    <keep-alive>
+      <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true"/>
     </keep-alive>
   </v-app>
 </template>
@@ -97,7 +98,9 @@ body {
     font-family: "Circe", sans-serif;
     line-height: 1.2;
 }
-
+.dialog-form{
+  max-width:558px !important; 
+}
 h1,
 h2,
 h3,

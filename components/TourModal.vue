@@ -1,7 +1,10 @@
 <template>
 
-  <div class="3d-modals">
-  <h1>Мох!!</h1>
+  <div class="tour-modals">
+    <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="this.src"></iframe>
+
+  <div
+        class=" close-button form"
       >
         <v-btn
           fab
@@ -11,11 +14,11 @@
           class="view-button form-close__btn"
           @click="close()"
         >&nbsp;</v-btn>
+      </div>
 </div>
 </template>
 
 <script>
-import axios from "axios"
 
 export default {
   name: "TourModal",
@@ -29,13 +32,19 @@ export default {
       type: Boolean,
       default: false
     },
+    src: {
+      type: String,
+      default: ''
+    }
   },
 };
 </script>
 
 <style lang="scss">
 
-  
+.tour-modals {
+  min-width: 70%!important;
+}
 form.order-form {
   vertical-align: middle;
   position: relative;

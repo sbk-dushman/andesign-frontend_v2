@@ -1,7 +1,7 @@
-<template>
+ <template> <!--558px -->
  <v-dialog
     v-model="dialog"
-    max-width="588px"
+    :max-width= "maxWidth"
     :dark="dark"
     hide-overlay
   >
@@ -25,6 +25,10 @@ export default {
       default: false
     },
     componentName: String,
+    maxWidth:{
+      type:String,
+      default:''
+    },
     componentProps: Object
   },
   data () {
