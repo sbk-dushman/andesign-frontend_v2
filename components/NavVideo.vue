@@ -1,5 +1,5 @@
 <template>
-  <div class="tuor-menu">
+  <div class="video-menu">
     <v-menu
       bottom
       open-on-hover
@@ -10,7 +10,7 @@
         <div
           v-bind="attrs"
           v-on="on"
-          class="tuor-toggle tuor andeTeal rounded-b-pill"
+          class="video-toggle tuor andeTeal rounded-b-pill"
         >
           <span
             class="d-md-none"
@@ -26,7 +26,7 @@
           </span>
           <span  
             class="white--text d-none d-md-inline"
-          >3d туры</span>
+          >Видео</span>
         </div>
       </template>
       <v-list
@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  name: "Nav3DTuor",
+  name: "NavVideo",
   props: {
   },
   data() {
@@ -69,7 +69,7 @@ export default {
   },
   computed: {
  tourMenu() {
-      return this.$store.state.tourMenu;
+      return this.$store.state.menus;
     }
   }
 };
@@ -84,7 +84,7 @@ div {
   vertical-align: middle;
 }
 
-.tuor-toggle {
+.video-toggle {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -93,7 +93,7 @@ div {
   height: 4em;
   padding: .5em 1em;
   min-width: 56px;
-  right: calc(17em + 16px);
+  right: calc(39em + 16px);
   z-index: -1;
 
   @media only screen and (min-width: 960px) {
@@ -105,7 +105,7 @@ div {
   }
 
   @media only screen and (min-width: 1424px) {
-    right: calc(18.5em + 16px);
+    right: calc(35em + 16px);
   }
 
   span {

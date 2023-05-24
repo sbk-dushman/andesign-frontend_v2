@@ -138,7 +138,9 @@
         </v-row>
       </v-container>
       <nav-presentations />
-      <Nav3DTuor/>
+      <nav-3D-tuor/>
+      <nav-video/>
+
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
@@ -302,6 +304,7 @@
   import NavContacts from "./NavContacts.vue"
   import NavPresentations from "./NavPresentations.vue"
   import Nav3DTuor from "./Nav3DTuor.vue"
+  import NavVideo from "./NavVideo.vue"
 
   export default {
     name: "AppNav",
@@ -310,7 +313,8 @@
       SearchToggle,
       NavContacts,
       NavPresentations,
-      Nav3DTuor
+      Nav3DTuor,
+      NavVideo,
     },
     props: {
       categories: {

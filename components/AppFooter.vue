@@ -355,7 +355,7 @@ footer {
       justify-content: flex-start;
 
       * {
-        z-index: 1;
+        z-index: 0;
       }
 
       .v-btn {
