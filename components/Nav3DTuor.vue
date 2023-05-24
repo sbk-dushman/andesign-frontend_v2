@@ -38,10 +38,10 @@
         <v-list-item
           v-for="tour in tourMenu"
           :key="tour.id"
-          target="_blank"
           class="text-uppercase"
+          href="#"
         >
-          <span @click.stop="showTour(tour.url)">
+          <span @click.stop.prevent="showTour(tour.url)">
             {{ tour.title }}
           </span>
         </v-list-item>
@@ -62,19 +62,13 @@ export default {
     }
   },
   methods: {
-    tourPages() {
-      return console.log(this.$store.state.menus);
-    },
     showTour(tuorUrl) {
       this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl})
     },
     
   },
   computed: {
-    pagesWithPresentations() {
-      return this.$store.state.pages.filter( page => page.acf.file )
-    }
-    , tourMenu() {
+ tourMenu() {
       return this.$store.state.menus;
     }
   }
