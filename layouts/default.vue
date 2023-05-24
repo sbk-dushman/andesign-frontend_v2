@@ -34,6 +34,9 @@
     <keep-alive>
     <modal-component componentName="tour-modal" maxWidth="80%"   :dark="true" />
   </keep-alive>
+  <keep-alive>
+    <modal-component componentName="video-modal" maxWidth="80%"   :dark="true" />
+  </keep-alive>
     <keep-alive>
       <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true"/>
     </keep-alive>

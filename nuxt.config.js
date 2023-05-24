@@ -53,7 +53,8 @@ export default {
     "~/plugins/pCases.server.js",
     "~/plugins/dateformat.js",
     "~/plugins/ymapPlugin.js",
-    "~/plugins/menus.server.js",
+    "~/plugins/tourMenu.server.js",
+    "~/plugins/videoMenu.server.js"
     
   ],
   router: {

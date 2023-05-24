@@ -25,6 +25,7 @@
             </svg>
           </span>
           <span  
+          @click.stop.prevent="showVideo(1)" 
             class="white--text d-none d-md-inline"
           >Видео</span>
         </div>
@@ -36,13 +37,13 @@
         class="presentations-list tuor-list"
       >
         <v-list-item
-          v-for="tour in tourMenu"
-          :key="tour.id"
+          v-for="video in videoMenu"
+          :key="video.id"
           class="text-uppercase"
           href="#"
         >
-          <span @click.stop.prevent="showTour(tour.url)">
-            {{ tour.title }}
+          <span @click.stop.prevent="showVideo(video.url,video.description)">
+            {{ video.title }}
           </span>
         </v-list-item>
       </v-list>
@@ -62,14 +63,13 @@ export default {
     }
   },
   methods: {
-    showTour(tuorUrl) {
-      this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl})
+    showVideo(srcMP4,srcWEBM) {
+      this.$nuxt.$emit('open-dialog', 'video-modal', {src_webm: srcWEBM, src_mp4: srcMP4})
     },
-    
   },
   computed: {
- tourMenu() {
-      return this.$store.state.menus;
+ videoMenu() {
+      return this.$store.state.videoMenu;
     }
   }
 };

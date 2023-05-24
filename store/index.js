@@ -7,7 +7,8 @@ export const state = () => ({
   tags: [],
   pages: [],
   mainPage: [],
-  tourMenu:[]
+  tourMenu: [],
+  videoMenu: [],
 })
 
 export const mutations = {
@@ -25,6 +26,9 @@ export const mutations = {
   },
   updateTourMenu: (state, tourMenu) => {
     state.tourMenu = tourMenu
+  },
+  updateVideoMenu: (state, videoMenu) => {
+    state.videoMenu = videoMenu
   },
   updateCategories: (state, categories) => {
     state.categories = categories
@@ -127,7 +131,29 @@ export const actions = {
       console.log(err)
     }
   },
+  async getVideoMenu ({ state, commit, dispatch }) {
+    if (state.videoMenu.length) return
+    try {
+      let videoMenu = await fetch(
+        `${siteURL}/wp-json/wp/v2/video-menu`
+      ).then(res => res.json())
 
+      videoMenu = videoMenu
+        .map(({ db_id, type_label, title, url , target, attr_title, description, }) => ({
+          db_id,
+          type_label,
+          title,
+          url,
+          target,
+          attr_title,
+          description
+        }))
+
+      commit("updateVideoMenu", videoMenu)
+    } catch (err) {
+      console.log(err)
+    }
+  },
   // nwe
   async getTags ({ state, commit }) {
     if (state.tags.length) return
