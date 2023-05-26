@@ -3,14 +3,26 @@
   <div class="video-modal">
  {{   this.src_mp4}}
  {{   }}
-    <video id="intro-video"  class="intro-section__video"  width="100%"
-            height="70%"
-            controls="controls" autoplay="false" playsinline  loop="loop" preload="auto" poster="/images/index_media/bg.jpg">
+    <video id="intro-video"  class="intro-section__video"  width="auto"
+            height="auto"
+            controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/images/index_media/bg.jpg">
             <source :src="this.src_webm+='#t=0.5'"
             type="video/webm">
             <source src="/images/index_media/mainvideo_1.mp4#t=0.5"
             type="video/mp4">
             </video>
+            <div class="video-modal___text-content"
+            >
+              <h2 
+              class="video-modal__title"> ДИЗАЙН </h2>
+              <p
+                class="video-modal__description"
+              >
+              Мы профессионально занимаемся изготовлением авторской мебели, воплощая в жизнь самые необычные дизайнерские проекты эксклюзивных элементов интерьера.
+
+Разрабатываем, производим и оснащаем мебелью рестораны, кафе, бары, номерной фонд отелей, апарт-комплексов и гостевых домов, а также ведем их последующее сопровождение и обслуживание.
+              </p>
+            </div>
     <div
         v-if="inDialog"
         class=" close-button tour-modal__btn-group"
@@ -20,7 +32,7 @@
           depressed
           elevation="0"
           color="andeLightGray"
-          class="view-button form-close__btn tour-modal-close"
+          class="view-button form-close__btn tour-modal-close video-modal__btn-group"
           @click="close()"
         >&nbsp;</v-btn>
       </div>
@@ -60,15 +72,20 @@ export default {
 
 <style lang="scss">
 
-.tour-modal {
-  min-width: 70%!important;
-  padding-top: 10px;
+.video-modal {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing:border-box;
+    flex-wrap: wrap;
+
 }
   .close-button {
     .v-btn.view-button span {
       background: url(/img/close.svg) center center no-repeat;
     }
-
     .view-button:after {
       padding-top: 1em;
       content: url(/img/close_white.svg);
@@ -80,11 +97,24 @@ export default {
   .tour-modal-close{
     margin-top: 10px;
   }
-  .tour-modal__btn-group{
-    display: flex;
+  .video-modal__btn-group{
+    width: 100%;
+  }
+  .video-modal___text-content{
+  // border: thin solid #fff;
+width: 49%;
+padding: 36px;
+display: flex;
+    flex-direction: column;
     justify-content: center;
   }
-  
+  .video-modal__title{
+    font-size: 33px;
+    color: #fff;
+  }
+  .video-modal__description{
+    color: #fff;
+  }
 
 
 

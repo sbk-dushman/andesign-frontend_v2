@@ -32,7 +32,7 @@
       <app-footer :categories="categories" />
     </v-main>
     <keep-alive>
-    <modal-component componentName="tour-modal" maxWidth="80%"   :dark="true" />
+    <modal-component componentName="tour-modal" maxWidth="66%"   :dark="true" />
   </keep-alive>
   <keep-alive>
     <modal-component componentName="video-modal" maxWidth="80%"   :dark="true" />
@@ -156,10 +156,8 @@ h1 {
 }
 
 video {
-  width: 100%;
-  margin: 25px 0;
+  max-width: 51%;
 }
-
 small {
   color: #9d5615;
 }
