@@ -4,9 +4,9 @@
    
     <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="this.src"></iframe>
     <div
-        v-if="inDialog"
-        class=" close-button tour-modal__btn-group"
+        class="tour-modal__btn-group"
       >
+      <h5 class="move-info">Нажми и тяни</h5>
         <v-btn
           fab
           depressed
@@ -15,6 +15,7 @@
           class="view-button form-close__btn tour-modal-close"
           @click="close()"
         >&nbsp;</v-btn>
+    
       </div>
 </div>
 </template>
@@ -50,9 +51,9 @@ export default {
 
 .tour-modal {
   min-width: 70%!important;
-  padding-top: 10px;
+  padding-left: 10px;
 }
-  .close-button {
+  .tour-modal__btn-group {
     .v-btn.view-button span {
       background: url(/img/close.svg) center center no-repeat;
     }
@@ -64,16 +65,21 @@ export default {
   }
   .form-close__btn:hover:after{
     padding-top: 0.5em  !important;
-  }
-  .tour-modal-close{
-    margin-top: 10px;
-  }
-  .tour-modal__btn-group{
-    display: flex;
-    justify-content: center;
-  }
-  
-
+  }  
+.tour-modal{
+  padding-top: 20px;
+    padding-bottom: 0;
+    padding-left: 5px;
+}
+.move-info{
+  color:#fff;
+  margin: 0;
+}
+.tour-modal__btn-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 </style>

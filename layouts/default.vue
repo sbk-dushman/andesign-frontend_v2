@@ -156,7 +156,11 @@ h1 {
 }
 
 video {
-  max-width: 51%;
+  
+  width: 49%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
 }
 small {
   color: #9d5615;

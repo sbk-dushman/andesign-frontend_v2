@@ -1,14 +1,12 @@
 <template>
 
   <div class="video-modal">
- {{   this.src_mp4}}
- {{   }}
     <video id="intro-video"  class="intro-section__video"  width="auto"
             height="auto"
-            controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/images/index_media/bg.jpg">
-            <source :src="this.src_webm+='#t=0.5'"
+            controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/img/loader.svg">
+            <source :src="src_webm"
             type="video/webm">
-            <source src="/images/index_media/mainvideo_1.mp4#t=0.5"
+            <source :src="src_mp4"
             type="video/mp4">
             </video>
             <div class="video-modal___text-content"
@@ -24,8 +22,7 @@
               </p>
             </div>
     <div
-        v-if="inDialog"
-        class=" close-button tour-modal__btn-group"
+        class="video-modal__btn-group"
       >
         <v-btn
           fab
@@ -53,7 +50,7 @@ export default {
       type: Boolean,
       default: false
     },
-    srcsrc_mp4: {
+    src_mp4: {
       type: String,
       default: ''
     },
@@ -73,16 +70,16 @@ export default {
 <style lang="scss">
 
 .video-modal {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+ 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     box-sizing:border-box;
     flex-wrap: wrap;
-
 }
-  .close-button {
+  .video-modal__btn-group{
+    position: absolute;
+    right:6px;
+    top: 6px;
     .v-btn.view-button span {
       background: url(/img/close.svg) center center no-repeat;
     }
@@ -91,15 +88,14 @@ export default {
       content: url(/img/close_white.svg);
     }
   }
-  .form-close__btn:hover:after{
+  .video-modal__btn-group:hover:after{
     padding-top: 0.5em  !important;
   }
-  .tour-modal-close{
-    margin-top: 10px;
-  }
-  .video-modal__btn-group{
-    width: 100%;
-  }
+  .video-modal{
+  padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
   .video-modal___text-content{
   // border: thin solid #fff;
 width: 49%;
