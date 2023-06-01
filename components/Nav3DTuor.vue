@@ -101,23 +101,32 @@ div {
     bottom: -3em;
     height: 3em;
     right: calc(0.5em + 16px);
-    padding: 0 3.5em;
+    width: 144px;
+    padding: 0 2.5em;
   }
 
   @media only screen and (min-width: 1424px) {
-    right: calc(18.5em + 16px);
+    right: calc(19.5em + 16px);
   }
 
   span {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    
+  }
+}
+.tuor-list{
+  @media only screen and (min-width: 960px) {
+
+    width: 144px;
   }
 }
 
 a, span {
   color: white;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 a:active, a:focus, a:visited {

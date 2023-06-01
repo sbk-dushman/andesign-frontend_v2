@@ -139,14 +139,15 @@ export const actions = {
       ).then(res => res.json())
 
       videoMenu = videoMenu
-        .map(({ db_id, type_label, title, url , target, attr_title, description, }) => ({
+        .map(({ db_id, type_label, title, url , target, attr_title, description,xfn}) => ({
           db_id,
           type_label,
           title,
           url,
           target,
           attr_title,
-          description
+          description,
+          xfn
         }))
 
       commit("updateVideoMenu", videoMenu)

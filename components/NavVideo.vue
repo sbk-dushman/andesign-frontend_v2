@@ -24,8 +24,7 @@
               </g>
             </svg>
           </span>
-          <span  
-          @click.stop.prevent="showVideo(1)" 
+          <span   
             class="white--text d-none d-md-inline"
           >Видео</span>
         </div>
@@ -41,8 +40,9 @@
           :key="video.id"
           class="text-uppercase"
           href="#"
+      
         >
-          <span @click.stop.prevent="showVideo(video.url,video.description)">
+          <span @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)">
             {{ video.title }}
           </span>
         </v-list-item>
@@ -63,8 +63,8 @@ export default {
     }
   },
   methods: {
-    showVideo(srcMP4,srcWEBM) {
-      this.$nuxt.$emit('open-dialog', 'video-modal', {src_webm: srcWEBM, src_mp4: srcMP4})
+    showVideo(title,srcMP4,srcWEBM,srcDescr,srcPoster) {
+      this.$nuxt.$emit('open-dialog', 'video-modal', {title:title,src_webm: srcWEBM, src_mp4: srcMP4,description:srcDescr,poster:srcPoster})
     },
   },
   computed: {
@@ -101,11 +101,12 @@ div {
     bottom: -3em;
     height: 3em;
     right: calc(0.5em + 16px);
-    padding: 0 3.5em;
+    width: 144px;
+    padding: 0 2.5em;
   }
 
   @media only screen and (min-width: 1424px) {
-    right: calc(35em + 16px);
+    right: calc(36em + 16px);
   }
 
   span {

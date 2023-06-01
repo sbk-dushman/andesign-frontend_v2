@@ -2,7 +2,7 @@
 
   <div class="tour-modal">
    
-    <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="this.src"></iframe>
+    <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="src"></iframe>
     <div
         class="tour-modal__btn-group"
       >
@@ -62,6 +62,9 @@ export default {
       padding-top: 1em;
       content: url(/img/close_white.svg);
     }
+  }
+  .tour-modal-close{
+    margin-top: 5px;
   }
   .form-close__btn:hover:after{
     padding-top: 0.5em  !important;

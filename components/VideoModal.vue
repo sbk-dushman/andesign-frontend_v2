@@ -1,9 +1,8 @@
 <template>
-
   <div class="video-modal">
     <video id="intro-video"  class="intro-section__video"  width="auto"
             height="auto"
-            controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/img/loader.svg">
+            controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/img/poster.jpg">
             <source :src="src_webm"
             type="video/webm">
             <source :src="src_mp4"
@@ -12,13 +11,11 @@
             <div class="video-modal___text-content"
             >
               <h2 
-              class="video-modal__title"> ДИЗАЙН </h2>
+              class="video-modal__title">  {{ title }} </h2>
               <p
                 class="video-modal__description"
               >
-              Мы профессионально занимаемся изготовлением авторской мебели, воплощая в жизнь самые необычные дизайнерские проекты эксклюзивных элементов интерьера.
-
-Разрабатываем, производим и оснащаем мебелью рестораны, кафе, бары, номерной фонд отелей, апарт-комплексов и гостевых домов, а также ведем их последующее сопровождение и обслуживание.
+             {{ description }}
               </p>
             </div>
     <div
@@ -55,6 +52,18 @@ export default {
       default: ''
     },
     src_webm: {
+      type: String,
+      default: ''
+    },
+    title:{
+      type: String,
+      default: ''
+    },
+    description:{
+      type: String,
+      default: ''
+    }, 
+    poster:{
       type: String,
       default: ''
     },
