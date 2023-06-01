@@ -100,7 +100,7 @@ div {
     align-items: center;
     bottom: -3em;
     height: 3em;
-    right: calc(0.5em + 16px);
+    right: calc(27.5em + 16px);
     width: 144px;
     padding: 0 2.5em;
   }

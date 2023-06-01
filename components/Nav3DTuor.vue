@@ -100,13 +100,13 @@ div {
     align-items: center;
     bottom: -3em;
     height: 3em;
-    right: calc(0.5em + 16px);
+    right: calc(13.5em + 16px);
     width: 144px;
     padding: 0 2.5em;
   }
 
   @media only screen and (min-width: 1424px) {
-    right: calc(19.5em + 16px);
+    right: calc(21.5em + 16px);
   }
 
   span {
