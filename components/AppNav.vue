@@ -399,6 +399,7 @@
       height: 56px;
       background-color: var(--v-andeDarkOrange-base);
       border-radius: 9999px;
+      z-index: 0;
 
       &:hover, &.is-active:hover {
         opacity: 1;

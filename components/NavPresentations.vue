@@ -90,7 +90,7 @@ div {
   padding: .5em 1em;
   min-width: 56px;
   right: calc(0.25em + 16px);
-  z-index: -1;
+  z-index: 2;
 
   @media only screen and (min-width: 960px) {
     align-items: center;
@@ -98,6 +98,7 @@ div {
     height: 3em;
     right: calc(0.5em + 16px);
     padding: 0 2.5em;
+  
   }
 
   @media only screen and (min-width: 1424px) {
