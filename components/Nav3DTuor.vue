@@ -114,7 +114,7 @@
           class="text-uppercase"
           href="#"
         >
-          <span @click.stop.prevent="showTour(tour.url)">
+          <span @click.stop.prevent="showTour(tour.url, tour.attr_title)">
             {{ tour.title }}
           </span>
         </v-list-item>
@@ -135,8 +135,8 @@ export default {
     }
   },
   methods: {
-    showTour(tuorUrl) {
-      this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl})
+    showTour(tuorUrl,attr_title ) {
+      this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl, action_alert:attr_title})
     },
     
   },

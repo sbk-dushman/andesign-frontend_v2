@@ -6,7 +6,7 @@
     <div
         class="tour-modal__btn-group"
       >
-      <h5 class="move-info">Нажми и тяни</h5>
+      <h5 class="move-info">{{action_alert}}</h5>
         <v-btn
           fab
           depressed
@@ -35,6 +35,10 @@ export default {
       default: false
     },
     src: {
+      type: String,
+      default: ''
+    },
+    action_alert: {
       type: String,
       default: ''
     }
