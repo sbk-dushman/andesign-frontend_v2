@@ -2,7 +2,7 @@
 
   <div class="tour-modal">
    
-    <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="src"></iframe>
+    <iframe width="100%" height="580" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="src"></iframe>
     <div
         class="tour-modal__btn-group"
       >
@@ -54,8 +54,9 @@ export default {
 <style lang="scss">
 
 .tour-modal {
-  min-width: 70%!important;
+  // min-width: 70%!important;
   padding-left: 10px;
+  
 }
   .tour-modal__btn-group {
     .v-btn.view-button span {
@@ -86,6 +87,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.tour-dialog{
+  
 }
 
 

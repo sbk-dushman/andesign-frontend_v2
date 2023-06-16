@@ -1,11 +1,14 @@
  <template> <!--558px -->
  <v-dialog
+
     v-model="dialog"
     :max-width= "maxWidth"
     :dark="dark"
     hide-overlay
+    :class="dClass"
+  
   >
-    <v-card>
+    <v-card   >
       <v-card-text
         class="pt-4">
         <keep-alive>
@@ -26,6 +29,10 @@ export default {
     },
     componentName: String,
     maxWidth:{
+      type:String,
+      default:''
+    },
+    dClass:{
       type:String,
       default:''
     },

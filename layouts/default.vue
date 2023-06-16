@@ -32,7 +32,7 @@
       <app-footer :categories="categories" />
     </v-main>
     <keep-alive>
-    <modal-component componentName="tour-modal" maxWidth="66%"   :dark="true" />
+    <modal-component componentName="tour-modal" maxWidth="60%" dClass="tour-dialog"  :dark="true" />
   </keep-alive>
   <keep-alive>
     <modal-component componentName="video-modal" maxWidth="80%"   :dark="true" />
