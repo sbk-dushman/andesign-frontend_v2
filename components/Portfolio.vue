@@ -105,14 +105,14 @@
         <div
           class="my-6 mx-auto d-flex d-md-none flex-row justify-center"
         >
-          <hr
+          <!-- <hr
             width="7px"
             class="andeLightGray mr-1"
-          >
-          <hr
+          > -->
+          <!-- <hr
             width="45px"
             class="andeLightGray"
-          >
+          > -->
         </div>
       </v-row>
     </v-container>
@@ -195,6 +195,7 @@ export default {
 section.portfolio {
   display: flex;
   position: relative;
+  background-color:  var(--v-background-base);
   
   @media only screen and (min-width: 960px) {
     &::before {
@@ -237,7 +238,6 @@ section.portfolio {
       padding: 0 4em 2.5em;
     }
   }
-
   .category {
     padding: 3em 0 0;// 1.25em;
     // margin-right: -1.25em;
