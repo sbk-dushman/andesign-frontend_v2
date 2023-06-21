@@ -79,11 +79,15 @@ export default {
 <style lang="scss">
 
 .video-modal {
- 
+  @media  (max-width: 1024px) {
+      justify-content: center;
+    }
     display: flex;
     justify-content: flex-start;
     box-sizing:border-box;
     flex-wrap: wrap;
+
+
 }
   .video-modal__btn-group{
     position: absolute;
@@ -106,12 +110,16 @@ export default {
     padding-left: 5px;
 }
   .video-modal___text-content{
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+    }
   // border: thin solid #fff;
 width: 49%;
 padding: 36px;
 display: flex;
     flex-direction: column;
     justify-content: center;
+   
   }
   .video-modal__title{
     font-size: 33px;

@@ -89,28 +89,40 @@ div {
   fill: #fff;
   width:25.5px; 
   height:27.5px;
+  @media only screen and (max-width: 600px){
+    width:23.5px; 
+  height:25.5px;
+  }
+  
 }
 .video-toggle {
   display: flex;
-  align-items: flex-end;
+    align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -2em;
-  height: 4em;
-  padding: .5em 1em;
+  bottom: -3em;
+    height: 3em;
+        right: calc(27.5em + 16px);
+   padding: 0 2.5em;
   min-width: 56px;
-  right: calc(39em + 16px);
   z-index: 1;
 
-  @media only screen and (min-width: 960px) {
-    align-items: center;
-    bottom: -3em;
-    height: 3em;
-    right: calc(27.5em + 16px);
-    width: 144px;
-    padding: 0 2.5em;
-  }
 
+
+  @media only screen and (max-width: 960px) {
+    // align-items: center;
+    bottom: -2.8em;
+    right: calc(16.5em + 16px);
+    padding: .5em;
+    height: 4em;
+    width: auto;
+    //
+  }
+  @media only screen and (max-width: 600px){
+    padding: .3em;
+    right: calc(13.5em + 16px);
+    height: 3em;
+}
   @media only screen and (min-width: 1424px) {
     right: calc(36em + 16px);
   }

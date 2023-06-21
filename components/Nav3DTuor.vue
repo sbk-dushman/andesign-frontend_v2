@@ -156,6 +156,14 @@ export default {
   fill: #fff;
   width:35px; 
   height:35px;
+ 
+  
+
+
+@media only screen and (max-width: 600px){
+  width:25px; 
+  height:35px;
+}
 }
 div {
   vertical-align: middle;
@@ -163,28 +171,37 @@ div {
 
 .tuor-toggle {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
   position: absolute;
-  bottom: -2em;
-  height: 4em;
+  bottom: -3em;
+    height: 3em;
+    align-items: center;
   padding: .5em 1em;
   min-width: 56px;
-  right: calc(17em + 16px);
+  right: calc(13.5em + 16px);
+padding: 0 2.5em;
   z-index: 1;
-
-  @media only screen and (min-width: 960px) {
-    align-items: center;
-    bottom: -3em;
-    height: 3em;
-    right: calc(13.5em + 16px);
-    width: 144px;
-    padding: 0 2.5em;
-  }
+  width: 144px;
 
   @media only screen and (min-width: 1424px) {
-    right: calc(21.5em + 16px);
+    right: calc(20.5em + 16px);
   }
+  @media only screen and (max-width: 960px) {
+    // align-items: center;
+    bottom: -2.8em;
+    right: calc(8.5em + 16px);
+    padding: .5em;
+    height: 4em;
+    width: auto;
+    //
+  }
+  @media only screen and (max-width: 600px){
+    padding: .3em;
+    height: 3.5em;
+    right: calc(6.5em + 16px);
+  }
+
+
 
   span {
     font-size: 14px;
@@ -194,9 +211,9 @@ div {
   }
 }
 .tuor-list{
-  @media only screen and (min-width: 960px) {
+  @media only screen and (max-width: 960px) {
 
-    width: 144px;
+    width: 108px;
   }
 }
 
@@ -204,6 +221,10 @@ a, span {
   color: white;
   font-size: 14px;
   line-height: 1.5;
+  @media only screen and (max-width: 600px){
+    font-size: 13px;
+  }
+  
 }
 
 a:active, a:focus, a:visited {
