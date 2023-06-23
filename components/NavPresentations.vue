@@ -1,10 +1,19 @@
 <template>
   <div class="presentation-menu">
+    <!--  slide-x-reverse-transition
+    -bind:icon="'fa-solid' + (sortData.field != 'id' ? ' fa-sort' : (sortData.type == 'asc' ? ' fa-sort-up' : ' fa-sort-down'))"
+         size="sm" color="#6c757d" class="me-1" />
+    
+    -->
     <v-menu
       bottom
       open-on-hover
-      origin="top"
-      transition="slide-y-transition"
+      :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"
+      :transition=" ($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
+
+
+    
+    
     >
       <template v-slot:activator="{ on, attrs }">
         <div
@@ -74,6 +83,10 @@ export default {
 <style lang="scss" scoped>
 .menuable__content__active {
   z-index: 0!important;
+  @media only screen and (max-width: 960px){
+  top: 45px!important;
+    left: 619px!important;
+  }
 }
 
 div {
@@ -124,6 +137,10 @@ a:active, a:focus, a:visited {
 .presentations-list {
 
   padding: 4em 0 2em;
+  @media only screen and (max-width: 960px){
+    padding: 2em 0 2em;
+    
+  }
 
   .v-list-item__content, .v-list-item__title {
     overflow: visible;

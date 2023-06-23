@@ -89,10 +89,6 @@ div {
   fill: #fff;
   width:25.5px; 
   height:27.5px;
-  @media only screen and (max-width: 600px){
-    width:23.5px; 
-  height:25.5px;
-  }
   
 }
 .video-toggle {
@@ -111,8 +107,8 @@ div {
 
   @media only screen and (max-width: 960px) {
     // align-items: center;
-    bottom: -2.8em;
-    right: calc(16.5em + 16px);
+    right: calc(0.25em + 16px);
+    top: 8em;
     padding: .5em;
     height: 4em;
     width: auto;

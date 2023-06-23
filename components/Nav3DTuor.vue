@@ -3,8 +3,8 @@
     <v-menu
       bottom
       open-on-hover
-      origin="top"
-      transition="slide-y-transition"
+      :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"
+      :transition=" ($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
     >
       <template v-slot:activator="{ on, attrs }">
         <div
@@ -156,14 +156,6 @@ export default {
   fill: #fff;
   width:35px; 
   height:35px;
- 
-  
-
-
-@media only screen and (max-width: 600px){
-  width:25px; 
-  height:35px;
-}
 }
 div {
   vertical-align: middle;
@@ -188,10 +180,11 @@ padding: 0 2.5em;
   }
   @media only screen and (max-width: 960px) {
     // align-items: center;
-    bottom: -2.8em;
-    right: calc(8.5em + 16px);
+
+    right: calc(0.25em + 16px);
+    top: 5em;
     padding: .5em;
-    height: 4em;
+    height: 5em;
     width: auto;
     //
   }
