@@ -231,6 +231,7 @@ section.portfolio {
   .container {
     padding: 2.5em 1.25em;
     position: relative;
+    overflow-x: hidden;
     @media only screen and (min-width: 960px) {
       padding: 0 1.5em 2.5em;
     }
@@ -303,7 +304,7 @@ section.portfolio {
     .category-icon {
       width: 1.1em;
       position: relative;
-      right: 0px;
+      right: -12px;
     }
 
     .subcategories {
