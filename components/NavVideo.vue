@@ -112,13 +112,7 @@ div {
     padding: .5em;
     height: 4em;
     width: auto;
-    //
   }
-  @media only screen and (max-width: 600px){
-    padding: .3em;
-    right: calc(13.5em + 16px);
-    height: 3em;
-}
   @media only screen and (min-width: 1424px) {
     right: calc(36em + 16px);
   }

@@ -188,11 +188,6 @@ padding: 0 2.5em;
     width: auto;
     //
   }
-  @media only screen and (max-width: 600px){
-    padding: .3em;
-    height: 3.5em;
-    right: calc(6.5em + 16px);
-  }
 
 
 
@@ -214,9 +209,9 @@ a, span {
   color: white;
   font-size: 14px;
   line-height: 1.5;
-  @media only screen and (max-width: 600px){
-    font-size: 13px;
-  }
+  // @media only screen and (max-width: 600px){
+  //   font-size: 13px;
+  // }
   
 }
 

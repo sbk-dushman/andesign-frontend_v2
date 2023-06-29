@@ -28,7 +28,10 @@
               left: () => nextSlide(),
               right: () => prevSlide(),
             }"
-            class="d-flex px-13"
+            class="d-flex"
+
+            
+            :class="($vuetify.breakpoint.sm|| $vuetify.breakpoint.xs ? 'px-2' : 'px-13')"
           >
             <v-img
               :src="image.url"
