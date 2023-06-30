@@ -72,6 +72,7 @@ a:visited {
   position: fixed;
   width: 100%;
   height: 100vh;
+  max-width: 100%;
   display: flex;
   align-items: flex-end;
   overflow: hidden;

@@ -139,7 +139,6 @@ a:active, a:focus, a:visited {
   padding: 4em 0 2em;
   @media only screen and (max-width: 960px){
     padding: 2em 0 2em;
-    
   }
 
   .v-list-item__content, .v-list-item__title {

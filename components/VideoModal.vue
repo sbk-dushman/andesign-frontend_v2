@@ -91,8 +91,10 @@ export default {
 }
   .video-modal__btn-group{
     position: absolute;
-    right:6px;
-    top: 6px;
+    right: 13px;
+    bottom: 10px;
+    margin-top: 0;
+    
     .v-btn.view-button span {
       background: url(/img/close.svg) center center no-repeat;
     }
@@ -100,6 +102,13 @@ export default {
       padding-top: 1em;
       content: url(/img/close_white.svg);
     }
+    button{
+      // @media (max-width: 1024px){
+      //   font-size: 0.8em !important;
+      //   margin-top: 0;
+      // }
+    }
+   
   }
   .video-modal__btn-group:hover:after{
     padding-top: 0.5em  !important;
@@ -110,13 +119,16 @@ export default {
     padding-left: 5px;
 }
   .video-modal___text-content{
+    @media only screen and (max-width: 1440px) {
+      padding: 23px;
+    width: 51%;
+    }
     @media only screen and (max-width: 1024px) {
       width: 100%;
     }
-  // border: thin solid #fff;
-width: 49%;
-padding: 36px;
-display: flex;
+    width: 49%;
+    padding: 36px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
    
@@ -124,6 +136,11 @@ display: flex;
   .video-modal__title{
     font-size: 33px;
     color: #fff;
+    line-height: 3;
+    margin-bottom:0;
+    @media only screen and (max-width: 1024px) {
+      line-height: 2;
+    }
   }
   .video-modal__description{
     color: #fff;

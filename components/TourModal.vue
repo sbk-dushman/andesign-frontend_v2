@@ -96,6 +96,7 @@ export default {
   .tour-modal-close{
     @media only screen and (max-width: 600px){
       font-size: 0.80em!important;
+      margin-top: 0;
     }
   }
 }

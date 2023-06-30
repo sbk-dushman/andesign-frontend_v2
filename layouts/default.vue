@@ -34,9 +34,9 @@
     <keep-alive>
     <modal-component componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '90%' :'65%')" dClass="tour-dialog"  :dark="true" />
   </keep-alive>
-  <keep-alive>
+  <!-- <keep-alive> -->
     <modal-component componentName="video-modal" maxWidth="80%"   :dark="true" />
-  </keep-alive>
+  <!-- </keep-alive> -->
     <keep-alive>
       <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true"/>
     </keep-alive>
@@ -161,7 +161,7 @@ video {
     }
   width: 49%;
     max-height: 500px;
-    object-fit: cover;
+    object-fit: inherit;
     object-position: center;
 
 }
