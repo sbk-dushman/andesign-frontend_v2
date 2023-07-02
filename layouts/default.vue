@@ -32,11 +32,11 @@
       <app-footer :categories="categories" />
     </v-main>
     <keep-alive>
-    <modal-component componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '90%' :'65%')" dClass="tour-dialog"  :dark="true" />
+    <modal-component :key="componentKey" componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '90%' :'65%')" dClass="tour-dialog"  :dark="true" />
   </keep-alive>
-  <!-- <keep-alive> -->
-    <modal-component componentName="video-modal" maxWidth="80%"   :dark="true" />
-  <!-- </keep-alive> -->
+  <keep-alive>
+    <modal-component :key="componentKey" componentName="video-modal" maxWidth="80%" :dark="true" />
+  </keep-alive>
     <keep-alive>
       <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true"/>
     </keep-alive>
@@ -57,6 +57,7 @@ export default {
   data() {
     return {
       showToTop: false,
+      componentKey:0,
     }
   },
   computed : {

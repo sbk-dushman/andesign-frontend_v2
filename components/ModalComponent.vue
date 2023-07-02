@@ -12,7 +12,7 @@
       <v-card-text
         class="pt-4">
         <keep-alive>
-          <component :is="componentName" :dark="dark" :inDialog="true" v-bind="dProps"></component>
+          <component :is="componentName" :dark="dark" :inDialog="true" v-bind="dProps" :key="componentKey"></component>
         </keep-alive>
       </v-card-text>
     </v-card>
@@ -41,7 +41,8 @@ export default {
   data () {
     return {
       dialog: false,
-      dProps: this.componentProps 
+      dProps: this.componentProps,
+      componentKey: 0,
     }
   },
   computed: {
@@ -56,6 +57,7 @@ export default {
   created() {
     this.$nuxt.$on('open-dialog', (component, props) => {
       if (this.componentName == component) {
+        this.componentKey += 1; 
         this.dProps = {...this.dProps, ...props,}
         this.dialog = true
       }

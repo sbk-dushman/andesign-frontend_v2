@@ -199,6 +199,7 @@ padding: 0 2.5em;
   }
 }
 .tuor-list{
+  max-width: 150px;
   @media only screen and (max-width: 960px) {
 
     width: 108px;

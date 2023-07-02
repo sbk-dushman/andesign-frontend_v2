@@ -138,6 +138,9 @@ export default {
     color: #fff;
     line-height: 3;
     margin-bottom:0;
+    @media only screen and (max-width: 768px) {
+      font-size: 28px;
+    }
     @media only screen and (max-width: 1024px) {
       line-height: 2;
     }
