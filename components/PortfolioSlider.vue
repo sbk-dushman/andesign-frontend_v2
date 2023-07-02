@@ -388,7 +388,14 @@ export default {
 
 
    @media only screen and (min-width: 960px) {
-          // top: 86%; 
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-touch-callout: none;  
+          .case-img:hover::before{
+                    opacity: 0!important;
+                }   
         }
     @media only screen and (min-width: 670px) {
   bottom: 3%;
@@ -402,9 +409,6 @@ export default {
   bottom: 10% !important;
       }
         }
-      }
-        .case-img:hover::before{
-          opacity: 1;
       }
 
   }

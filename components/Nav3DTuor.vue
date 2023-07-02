@@ -1,10 +1,10 @@
 <template>
   <div class="tuor-menu">
-    <v-menu
+    <v-menu 
       bottom
       open-on-hover
       :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"
-      :transition=" ($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
+      :transition="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
     >
       <template v-slot:activator="{ on, attrs }">
         <div
@@ -108,13 +108,13 @@
         rounded
         class="presentations-list tuor-list"
       >
-        <v-list-item
+        <v-list-item @click.stop.prevent="showTour(tour.url, tour.attr_title)"
           v-for="tour in tourMenu"
           :key="tour.id"
           class="text-uppercase"
           href="#"
         >
-          <span @click.stop.prevent="showTour(tour.url, tour.attr_title)">
+          <span>
             {{ tour.title }}
           </span>
         </v-list-item>

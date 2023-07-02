@@ -35,16 +35,17 @@
         dense
         color="andeTeal"
         rounded
+        location="left"
         class="presentations-list tuor-list"
       >
-        <v-list-item
+        <v-list-item  @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)"
           v-for="video in videoMenu"
           :key="video.id"
           class="text-uppercase"
           href="#"
       
         >
-          <span @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)">
+          <span>
             {{ video.title }}
           </span>
         </v-list-item>

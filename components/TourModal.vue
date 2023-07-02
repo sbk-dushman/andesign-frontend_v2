@@ -58,6 +58,9 @@ export default {
   @media only screen and (max-width: 600px){
     height: 43VH;
   }
+  @media only screen and (max-width: 960px){
+    height: 96VH;
+  }
   padding-left: 10px;
   
 }
@@ -93,16 +96,13 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5em;
-  .tour-modal-close{
-    @media only screen and (max-width: 600px){
-      font-size: 0.80em!important;
-      margin-top: 0;
-    }
-  }
 }
 
-.tour-dialog{
-  
+.tour-dialog{   
+   @media only screen and (max-width: 960px){
+    margin: 0;
+    min-height: 100%!important;
+    }
 }
 
 

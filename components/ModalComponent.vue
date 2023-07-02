@@ -5,14 +5,14 @@
     :max-width= "maxWidth"
     :dark="dark"
     hide-overlay
-    :class="dClass"
+    :content-class="dClass"
   
   >
     <v-card   >
       <v-card-text
         class="pt-4">
         <keep-alive>
-          <component :is="componentName" :dark="dark" :inDialog="true" v-bind="dProps" :key="componentKey"></component>
+          <component   :is="componentName" :dark="dark" :inDialog="true" v-bind="dProps" :key="componentKey"></component>
         </keep-alive>
       </v-card-text>
     </v-card>
