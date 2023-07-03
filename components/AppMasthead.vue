@@ -502,6 +502,9 @@ section.masthead {
   }
 
   .hero-order-wrapper {
+    @media (min-width: 2300px  ) {
+      background: none;
+    }
     cursor: pointer;
     width: 12.3vw;
     height: 12.3vw;
@@ -512,11 +515,18 @@ section.masthead {
     justify-content: center;
     background: url("/img/hero-order-btn.png") center top no-repeat;
 
+
     @media only screen and (min-width: 960px) {
       width: 12.3vw;
       height: 12.3vw;
       top: calc(-6.15vw + 1.6em);
     }
+
+    @media (max-width: 1024px  ) {
+      background: none;
+      transform: scale(0.9);
+    }
+
 
     &:hover .order-button:after, &:hover .order-button:before {
       top: 0;

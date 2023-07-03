@@ -164,8 +164,12 @@ video {
     max-height: 500px;
     object-fit: inherit;
     object-position: center;
-
 }
+.container--fluid{ 
+  // если чё убрать 
+  // max-width: 2560px;
+}
+
 small {
   color: #9d5615;
 }
