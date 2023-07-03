@@ -35,10 +35,10 @@
     <modal-component :key="componentKey" componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '100%' :'65%')" dClass="tour-dialog"  :dark="true" />
   </keep-alive>
   <keep-alive>
-    <modal-component :key="componentKey" componentName="video-modal" maxWidth="80%" :dark="true" />
+    <modal-component :key="componentKey" componentName="video-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '100%' :'80%')" :dark="true" dClass="video-dialog"/>
   </keep-alive>
     <keep-alive>
-      <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true"/>
+      <modal-component componentName="order-form" maxWidth="558px" :componentProps="{allowUpload: true}" :dark="true" />
     </keep-alive>
   </v-app>
 </template>
@@ -360,10 +360,6 @@ span.descr {
 
 .v-slide-group__next, .v-slide-group__prev {
   display: none;
-}
-
-.dClass{
-  text-decoration: #151D24;
 }
 
 </style>

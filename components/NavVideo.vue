@@ -35,7 +35,6 @@
         dense
         color="andeTeal"
         rounded
-        location="left"
         class="presentations-list tuor-list"
       >
         <v-list-item  @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)"

@@ -1,4 +1,4 @@
- <template> <!--558px -->
+ <template>
  <v-dialog
 
     v-model="dialog"
@@ -8,7 +8,7 @@
     :content-class="dClass"
   
   >
-    <v-card   >
+    <v-card>
       <v-card-text
         class="pt-4">
         <keep-alive>

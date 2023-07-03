@@ -81,6 +81,8 @@ export default {
 .video-modal {
   @media  (max-width: 1024px) {
       justify-content: center;
+      height: 96vh;
+      overflow-y: visible;
     }
     display: flex;
     justify-content: flex-start;
@@ -103,10 +105,10 @@ export default {
       content: url(/img/close_white.svg);
     }
     button{
-      // @media (max-width: 1024px){
-      //   font-size: 0.8em !important;
-      //   margin-top: 0;
-      // }
+      @media (max-width: 768px){
+        font-size: 0.8em !important;
+        margin-top: 0;
+      }
     }
    
   }
@@ -125,6 +127,8 @@ export default {
     }
     @media only screen and (max-width: 1024px) {
       width: 100%;
+      padding: 10px;
+     
     }
     width: 49%;
     padding: 36px;
@@ -147,6 +151,17 @@ export default {
   }
   .video-modal__description{
     color: #fff;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1em;
+    }
+  }
+  .video-dialog{
+    @media only screen and (max-width: 1024px) {
+margin: 0;
+max-height: 100%!important;
+overflow-y: hidden;
+     
+    }
   }
 
 

@@ -2,7 +2,7 @@
 
   <div class="tour-modal">
    
-    <iframe width="100%" height="90%" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="src"></iframe>
+    <iframe width="100%" :height="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? '95%' :'90%'" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" :src="src"></iframe>
     <div
         class="tour-modal__btn-group"
       >
@@ -54,15 +54,20 @@ export default {
 <style lang="scss">
 
 .tour-modal {
+  padding-top: 20px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   height: 60VH;
   @media only screen and (max-width: 600px){
     height: 43VH;
   }
   @media only screen and (max-width: 960px){
-    height: 96VH;
+    height: 97VH;
   }
-  padding-left: 10px;
-  
 }
   .tour-modal__btn-group {
     .v-btn.view-button span {
@@ -73,6 +78,12 @@ export default {
       padding-top: 1em;
       content: url(/img/close_white.svg);
     }
+    button{
+      @media (max-width: 1024px){
+        font-size: 0.8em !important;
+        margin-top: 0;
+      }
+    }
   }
   .tour-modal-close{
     margin-top: 5px;
@@ -80,11 +91,6 @@ export default {
   .form-close__btn:hover:after{
     padding-top: 0.5em  !important;
   }  
-.tour-modal{
-  padding-top: 20px;
-    padding-bottom: 0;
-    padding-left: 5px;
-}
 .move-info{
   color:#fff;
   margin: 0;
@@ -96,12 +102,14 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5em;
+  width: 100%;
 }
 
 .tour-dialog{   
    @media only screen and (max-width: 960px){
     margin: 0;
-    min-height: 100%!important;
+    overflow-y: visible;
+    max-height: 100%!important;
     }
 }
 
