@@ -81,13 +81,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menuable__content__active {
-  z-index: 0!important;
-  @media only screen and (max-width: 960px){
-  top: 45px!important;
-    left: 619px!important;
-  }
-}
+
 
 div {
   vertical-align: middle;
@@ -137,9 +131,6 @@ a:active, a:focus, a:visited {
 .presentations-list {
 
   padding: 4em 0 2em;
-  @media only screen and (max-width: 960px){
-    padding: 2em 0 2em;
-  }
 
   .v-list-item__content, .v-list-item__title {
     overflow: visible;

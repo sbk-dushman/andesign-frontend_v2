@@ -3,8 +3,8 @@
     <v-menu
       bottom
       open-on-hover
-      origin="top"
-      transition="slide-y-transition"
+      :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"
+      :transition=" ($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
     >
       <template v-slot:activator="{ on, attrs }">
         <div
@@ -78,9 +78,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menuable__content__active {
-  z-index: 0!important;
-}
 
 div {
   vertical-align: middle;
@@ -91,6 +88,7 @@ div {
   height:27.5px;
   
 }
+
 .video-toggle {
   display: flex;
     align-items: center;

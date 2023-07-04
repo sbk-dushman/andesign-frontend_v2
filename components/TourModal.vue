@@ -108,7 +108,7 @@ export default {
 .tour-dialog{   
    @media only screen and (max-width: 960px){
     margin: 0;
-    overflow-y: visible;
+    overflow: hidden;
     max-height: 100%!important;
     }
 }

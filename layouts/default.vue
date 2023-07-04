@@ -365,5 +365,19 @@ span.descr {
 .v-slide-group__next, .v-slide-group__prev {
   display: none;
 }
+.menuable__content__active {
+  z-index: 0!important;
+  @media only screen and (max-width: 960px){
+  top: 45px!important;
+   right: 80px!important;
+   left: auto !important;
+   z-index: 10!important;
+  }
+  .presentations-list {
+    @media only screen and (max-width: 960px){
+      padding: 2em 0 2em;
+  }
+}
+}
 
 </style>

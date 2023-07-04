@@ -1,7 +1,8 @@
 <template>
-  <div class="tuor-menu">
+  <div class="">
     <v-menu 
       bottom
+    class="touor-menu"
       open-on-hover
       :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"
       :transition="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
@@ -149,9 +150,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menuable__content__active {
-  z-index: 0!important;
-}
 .tour-mobile-icon{
   fill: #fff;
   width:35px; 
@@ -176,7 +174,7 @@ padding: 0 2.5em;
   width: 144px;
 
   @media only screen and (min-width: 1424px) {
-    right: calc(20.5em + 16px);
+    right: calc(21.5em + 16px);
   }
   @media only screen and (max-width: 960px) {
     // align-items: center;
@@ -190,7 +188,10 @@ padding: 0 2.5em;
   }
 
 
-
+  .touor-menu.menuable__content__active{
+    right: 10%!important;
+    left: auto !important;
+  }
   span {
     font-size: 14px;
     font-weight: bold;
