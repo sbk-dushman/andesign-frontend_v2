@@ -66,7 +66,7 @@ export default {
     height: 43VH;
   }
   @media only screen and (max-width: 960px){
-    height: 97VH;
+    height: 90VH;
   }
 }
   .tour-modal__btn-group {
@@ -101,14 +101,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5em;
+  padding-top: 1em;
   width: 100%;
 }
 
 .tour-dialog{   
    @media only screen and (max-width: 960px){
     margin: 0;
-    overflow: hidden;
+    // overflow: hidden;
     max-height: 100%!important;
     }
 }

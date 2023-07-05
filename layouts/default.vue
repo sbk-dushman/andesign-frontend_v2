@@ -375,7 +375,7 @@ span.descr {
   }
   .presentations-list {
     @media only screen and (max-width: 960px){
-      padding: 2em 0 2em;
+      padding: 2em 0!important;
   }
 }
 }

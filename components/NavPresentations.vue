@@ -136,5 +136,8 @@ a:active, a:focus, a:visited {
     overflow: visible;
   }
 }
+.is-active.hamburger .presentations-toggle{
+display: none;
+}
 
 </style>

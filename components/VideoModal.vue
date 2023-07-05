@@ -81,7 +81,7 @@ export default {
 .video-modal {
   @media  (max-width: 1024px) {
       justify-content: center;
-      height: 96vh;
+      height: 90vh;
       overflow-y: visible;
     }
     display: flex;
@@ -159,7 +159,7 @@ export default {
     @media only screen and (max-width: 1024px) {
 margin: 0;
 max-height: 100%!important;
-overflow-y: hidden;
+overflow-y: scroll;
      
     }
   }
