@@ -7,7 +7,8 @@
       :transition=" ($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
     >
       <template v-slot:activator="{ on, attrs }">
-        <div
+        <transition name="fade">
+        <div v-if="!asideOpen"
           v-bind="attrs"
           v-on="on"
           class="video-toggle tuor andeTeal rounded-b-pill"
@@ -30,6 +31,7 @@
             class="white--text d-none d-md-inline"
           >Видео</span>
         </div>
+        </transition>
       </template>
       <v-list
         dense
@@ -56,8 +58,15 @@
 <script>
 export default {
   name: "NavVideo",
-  props: {
+  model: {
+    prop: 'asideOpen',
   },
+  props: {
+  asideOpen: {
+    type: Boolean,
+    default: false
+  },
+},
   data() {
     return {
       toggled: false,

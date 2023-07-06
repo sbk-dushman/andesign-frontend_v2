@@ -8,7 +8,8 @@
       :transition="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'slide-x-reverse-transition' :'slide-y-transition'"
     >
       <template v-slot:activator="{ on, attrs }">
-        <div
+        <transition name="fade">
+        <div v-if="!asideOpen"
           v-bind="attrs"
           v-on="on"
           class="tuor-toggle tuor andeTeal rounded-b-pill"
@@ -102,6 +103,7 @@
             class="white--text d-none d-md-inline"
           >3d туры</span>
         </div>
+        </transition>
       </template>
       <v-list
         dense
@@ -127,7 +129,14 @@
 <script>
 export default {
   name: "Nav3DTuor",
+  model: {
+    prop: 'asideOpen',
+  },
   props: {
+    asideOpen: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {

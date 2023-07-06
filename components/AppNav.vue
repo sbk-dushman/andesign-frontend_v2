@@ -137,9 +137,9 @@
           </v-col>
         </v-row>
       </v-container>
-      <nav-presentations />
-      <nav-3D-tuor/>
-      <nav-video/>
+      <nav-presentations   v-model="drawer" />
+      <nav-3D-tuor   v-model="drawer"/>
+      <nav-video  v-model="drawer"/>
 
     </v-app-bar>
     <v-navigation-drawer

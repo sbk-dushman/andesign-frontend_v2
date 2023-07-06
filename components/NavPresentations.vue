@@ -16,13 +16,14 @@
     
     >
       <template v-slot:activator="{ on, attrs }">
-        <div
+        <transition name="fade">
+        <div v-if="!asideOpen"
           v-bind="attrs"
           v-on="on"
           class="presentations-toggle andeTeal rounded-b-pill"
         >
-          <span
-            class="d-md-none"
+          <span 
+            class="d-md-none "
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="17.5" viewBox="0 0 15.5 17.5">
               <g id="Outline_Files_Download" data-name="Outline / Files /Download" transform="translate(-4.25 -3.25)">
@@ -37,6 +38,7 @@
             class="white--text d-none d-md-inline"
           >Презентации</span>
         </div>
+        </transition>
       </template>
       <v-list
         dense
@@ -62,8 +64,16 @@
 
 <script>
 export default {
+  model: {
+    prop: 'asideOpen',
+  },
   name: "NavPresentations",
   props: {
+
+    asideOpen: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
@@ -136,8 +146,12 @@ a:active, a:focus, a:visited {
     overflow: visible;
   }
 }
-.is-active.hamburger .presentations-toggle{
-display: none;
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
 }
 
 </style>
