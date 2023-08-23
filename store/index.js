@@ -116,14 +116,15 @@ export const actions = {
       ).then(res => res.json())
 
       tourMenu = tourMenu
-        .map(({ db_id, type_label, title, url , target, attr_title, description, }) => ({
+        .map(({ db_id, type_label, title, url , target, attr_title, description, xfn,}) => ({
           db_id,
           type_label,
           title,
           url,
           target,
           attr_title,
-          description
+          description,
+          xfn
         }))
 
       commit("updateTourMenu", tourMenu)
@@ -139,7 +140,7 @@ export const actions = {
       ).then(res => res.json())
 
       videoMenu = videoMenu
-        .map(({ db_id, type_label, title, url , target, attr_title, description,xfn}) => ({
+        .map(({ db_id, type_label, title, url , target, attr_title, description,xfn,}) => ({
           db_id,
           type_label,
           title,
@@ -147,7 +148,7 @@ export const actions = {
           target,
           attr_title,
           description,
-          xfn
+          xfn,
         }))
 
       commit("updateVideoMenu", videoMenu)

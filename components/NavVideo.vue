@@ -1,5 +1,5 @@
 <template>
-  <div class="video-menu">
+  <div  v-if="videoMenu.length > 0"  class="video-menu">
     <v-menu
       bottom
       open-on-hover
@@ -80,7 +80,7 @@ export default {
   },
   computed: {
  videoMenu() {
-      return this.$store.state.videoMenu;
+      return this.$store.state.videoMenu.filter((item)=> item.xfn==="on");
     }
   }
 };

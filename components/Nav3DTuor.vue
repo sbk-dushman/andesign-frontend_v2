@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="" v-if="tourMenu.xfn===1">
     <v-menu 
       bottom
     class="touor-menu"
