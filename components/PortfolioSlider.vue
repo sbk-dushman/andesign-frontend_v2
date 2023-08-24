@@ -358,6 +358,12 @@ export default {
           margin-right: 10px;
         }
       }
+      .case-img:hover::before{
+                    opacity:1;
+                    @media (max-width: 960px) {
+                      opacity: 0 !important;;
+                    }
+                }  
       .case-img{
         cursor: pointer;
         position: relative;
@@ -385,18 +391,6 @@ export default {
    bottom:  0;                     
    transform: translate(0, -50%);  
    opacity: 0;
-
-
-   @media only screen and (min-width: 960px) {
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          -webkit-touch-callout: none;  
-          .case-img:hover::before{
-                    opacity: 0!important;
-                }   
-        }
     @media only screen and (min-width: 670px) {
   bottom: 3%;
       }
@@ -410,6 +404,7 @@ export default {
       }
         }
       }
+ 
 
   }
 }
