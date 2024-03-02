@@ -61,12 +61,14 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-  height: 60VH;
+    
+  height: 60vh;
   @media only screen and (max-width: 600px){
-    height: 43VH;
+    height: 43vh;
   }
   @media only screen and (max-width: 960px){
-    height: 90VH;
+    height: 90vh;
+    
   }
 }
   .tour-modal__btn-group {

@@ -106,16 +106,19 @@ div {
   height: 4em;
   padding: .5em 1em;
   min-width: 56px;
+  width: 150px;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
   right: calc(0.25em + 16px);
   z-index: 2;
-
+  min-width: 56px;
   @media only screen and (min-width: 960px) {
     align-items: center;
     bottom: -3em;
     height: 3em;
     right: calc(0.5em + 16px);
-    padding: 0 2.5em;
-  
+    // padding: 0 2.5em;
+    max-width: 56px;
   }
 
   @media only screen and (min-width: 1424px) {

@@ -106,9 +106,13 @@ div {
   bottom: -3em;
     height: 3em;
         right: calc(27.5em + 16px);
-   padding: 0 2.5em;
+  //  padding: 0 2.5em;
+  padding: .5em 1em;
   min-width: 56px;
+  min-width: 130px;
   z-index: 1;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
 
 
 
@@ -119,9 +123,13 @@ div {
     padding: .5em;
     height: 4em;
     width: auto;
+    min-width: 56px;
+    width: 130px;
+    border-bottom-left-radius: 999px !important;
+  border-bottom-right-radius: 999px !important;
   }
   @media only screen and (min-width: 1424px) {
-    right: calc(36em + 16px);
+    right: calc(21.4em + 16px);
   }
 
   span {

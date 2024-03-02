@@ -175,15 +175,16 @@ div {
   bottom: -3em;
     height: 3em;
     align-items: center;
-  padding: .5em 1em;
   min-width: 56px;
   right: calc(13.5em + 16px);
-padding: 0 2.5em;
+  padding: .5em 1em;
   z-index: 1;
-  width: 144px;
+  width: 130px;
+  border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
 
   @media only screen and (min-width: 1424px) {
-    right: calc(21.5em + 16px);
+    right: calc(12.8em + 16px);
   }
   @media only screen and (max-width: 960px) {
     // align-items: center;
@@ -209,7 +210,7 @@ padding: 0 2.5em;
   }
 }
 .tuor-list{
-  max-width: 150px;
+  max-width: 130px;
   @media only screen and (max-width: 960px) {
 
     width: 108px;
