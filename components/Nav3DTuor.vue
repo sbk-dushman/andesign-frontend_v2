@@ -175,8 +175,8 @@ div {
   bottom: -3em;
     height: 3em;
     align-items: center;
-  min-width: 56px;
-  right: calc(13.5em + 16px);
+  
+  right: calc(10.3em + 16px);
   padding: .5em 1em;
   z-index: 1;
   width: 130px;
@@ -188,7 +188,8 @@ div {
   }
   @media only screen and (max-width: 960px) {
     // align-items: center;
-
+    min-width: 56px;
+    width: auto;
     right: calc(0.25em + 16px);
     top: 5em;
     padding: .5em;

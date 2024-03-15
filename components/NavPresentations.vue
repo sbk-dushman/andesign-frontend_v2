@@ -99,26 +99,29 @@ div {
 
 .presentations-toggle {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -2em;
-  height: 4em;
+  bottom: -3em;
+  height: 3em;
   padding: .5em 1em;
-  min-width: 56px;
   width: 150px;
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
   right: calc(0.25em + 16px);
   z-index: 2;
-  min-width: 56px;
-  @media only screen and (min-width: 960px) {
-    align-items: center;
-    bottom: -3em;
-    height: 3em;
-    right: calc(0.5em + 16px);
+
+  @media only screen and (max-width: 960px) {
+    // align-items: center;
+    bottom: -2em;
+    height: 4em;
+    align-items: flex-end;
+  
+
+    // right: calc(0.5em + 16px);
     // padding: 0 2.5em;
-    max-width: 56px;
+    width: 56px !important;
+    // max-width: auto;
   }
 
   @media only screen and (min-width: 1424px) {
