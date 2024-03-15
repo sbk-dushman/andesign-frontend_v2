@@ -32,7 +32,7 @@
       <app-footer :categories="categories" />
     </v-main>
     <keep-alive>
-    <modal-component :key="componentKey" componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '100%' :'65%')" dClass="tour-dialog"  :dark="true" />
+    <modal-component :key="componentKey" componentName="tour-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '100%' :'48%')" dClass="tour-dialog"  :dark="true" />
   </keep-alive>
   <keep-alive>
     <modal-component :key="componentKey" componentName="video-modal" :maxWidth="($vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '100%' :'80%')" :dark="true" dClass="video-dialog"/>
