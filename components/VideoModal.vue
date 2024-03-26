@@ -1,13 +1,28 @@
 <template>
   <div class="video-modal">
-    <video id="intro-video"  class="intro-section__video"  width="auto"
+
+    <!-- <video id="intro-video"  width="auto"
             height="auto"
             controls="controls" autoplay="false" playsinline  loop="loop" preload="metadata" poster="/img/poster.jpg">
             <source :src="src_webm"
             type="video/webm">
             <source :src="src_mp4"
             type="video/mp4">
-            </video>
+            </video> -->
+            <VideoPlayer 
+            :options="{    
+                          autoplay: true,
+                           controls: true,
+                           loop:true,
+                            sources: [
+                              {
+                                src:
+                                src_mp4,
+                                  type: 'video/mp4'
+                              }
+                              ]}"        />
+ 
+
             <div class="video-modal___text-content"
             >
               <h2 
@@ -34,14 +49,18 @@
 </template>
 
 <script>
-
+ import VideoPlayer from "./VideoPlayer.vue"
 export default {
   name: "VideoModal",
+
+    components: {VideoPlayer,},
+
   props: {
     inDialog: {
       type: Boolean,
       default: false
     },
+  
 
     dark: {
       type: Boolean,
@@ -67,6 +86,17 @@ export default {
       type: String,
       default: ''
     },
+      videoOptions: {
+        autoplay: true,
+        controls: true,
+        sources: [
+          {
+            src:
+              '/path/to/video.mp4',
+              type: 'video/mp4'
+          }
+        ]
+      },
   },
   methods: {
     close() {
