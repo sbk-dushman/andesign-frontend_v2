@@ -156,15 +156,15 @@ h1 {
     margin: .5em 1em 1em 0;
 }
 
-video {
-  @media (max-width: 1024px) {
-      width: 100%;
-    }
-  width: 49%;
-    max-height: 500px;
-    object-fit: inherit;
-    object-position: center;
-}
+// video {
+//   @media (max-width: 1024px) {
+//       width: 100%;
+//     }
+//   width: 49%;
+//     max-height: 500px;
+//     object-fit: inherit;
+//     object-position: center;
+// }
 .container--fluid{ 
   // если чё убрать 
   // max-width: 2560px;

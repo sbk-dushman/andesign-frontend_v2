@@ -1965,6 +1965,19 @@ video::-webkit-media-text-track-display {
 .video-js *:focus:not(:focus-visible) {
   outline: none;
 }
-
+.vjs-matrix{
+  
+  @media only screen and (max-width: 1500px) {
+   
+    width: 100%;
+   
+    }
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+      min-height: 40vh;
+      min-width: 20vw;
+     
+    }
+}
 
 </style>

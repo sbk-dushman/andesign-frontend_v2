@@ -8,12 +8,13 @@
             type="video/webm">
             <source :src="src_mp4"
             type="video/mp4">
-            </video> -->
+            </video> --> 
             <VideoPlayer 
             :options="{    
                           autoplay: true,
                            controls: true,
                            loop:true,
+                           width:800,
                             sources: [
                               {
                                 src:
@@ -87,8 +88,8 @@ export default {
       default: ''
     },
       videoOptions: {
-        autoplay: true,
-        controls: true,
+        // autoplay: true,
+        // controls: true,
         sources: [
           {
             src:
@@ -109,15 +110,23 @@ export default {
 <style lang="scss">
 
 .video-modal {
-  @media  (max-width: 1024px) {
-      justify-content: center;
-      height: 90vh;
-      overflow-y: visible;
-    }
-    display: flex;
+  display: flex;
     justify-content: flex-start;
     box-sizing:border-box;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  @media  (max-width: 1500px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      height: 90vh;
+      overflow-y: visible;
+      overflow-x: hidden;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media  (max-width: 600px) {
+    height: 90vh;
+    
+    }
 
 
 }
@@ -151,9 +160,10 @@ export default {
     padding-left: 5px;
 }
   .video-modal___text-content{
-    @media only screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1500px) {
       padding: 23px;
-    width: 51%;
+      padding-bottom: 0;
+    width: 100%;
     }
     @media only screen and (max-width: 1024px) {
       width: 100%;
@@ -193,6 +203,7 @@ overflow-y: scroll;
      
     }
   }
+  
 
 
 
