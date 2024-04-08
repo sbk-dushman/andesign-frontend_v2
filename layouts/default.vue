@@ -366,7 +366,6 @@ span.descr {
   display: none;
 }
 .menuable__content__active {
-  z-index: 0!important;
   @media only screen and (max-width: 960px){
   top: 45px!important;
    right: 80px!important;

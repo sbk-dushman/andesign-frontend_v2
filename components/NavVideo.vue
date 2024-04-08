@@ -1,6 +1,7 @@
 <template>
   <div  v-if="videoMenu.length > 0"  class="video-menu">
     <v-menu
+      z-index="0"
       bottom
       open-on-hover
       :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"

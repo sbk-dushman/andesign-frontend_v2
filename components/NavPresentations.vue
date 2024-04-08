@@ -6,6 +6,7 @@
     
     -->
     <v-menu
+    z-index="0"
       bottom
       open-on-hover
       :origin="($vuetify.breakpoint.sm||$vuetify.breakpoint.xs)? 'right' :'top'"

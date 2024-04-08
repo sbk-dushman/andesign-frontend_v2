@@ -1,6 +1,7 @@
 <template>
   <div class="" v-if="tourMenu.length > 0">
     <v-menu 
+    z-index="0"
       bottom
     class="touor-menu"
       open-on-hover
