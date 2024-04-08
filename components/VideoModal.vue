@@ -116,15 +116,13 @@ export default {
     flex-wrap: nowrap;
   @media  (max-width: 1500px) {
         flex-wrap: wrap;
-        justify-content: center;
-      height: 90vh;
-      overflow-y: visible;
-      overflow-x: hidden;
-      flex-direction: column;
+        overflow-x: hidden;
+        flex-direction: column;
+        align-items:center;
       justify-content: space-between;
     }
     @media  (max-width: 600px) {
-    height: 90vh;
+      
     
     }
 

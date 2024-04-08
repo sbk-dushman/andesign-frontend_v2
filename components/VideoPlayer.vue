@@ -1968,14 +1968,18 @@ video::-webkit-media-text-track-display {
 .vjs-matrix{
   
   @media only screen and (max-width: 1500px) {
-   
-    width: 100%;
+  max-height: 45vh;
+    max-width: 90vw;
    
     }
     @media only screen and (max-width: 1024px) {
-      width: 100%;
-      min-height: 40vh;
-      min-width: 20vw;
+      height: 50vh;
+      width: 75vw;
+     
+    }
+    @media only screen and (max-width: 960px) {
+      height: 50vh;
+      width: 90vw;
      
     }
 }
