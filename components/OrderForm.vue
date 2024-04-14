@@ -66,7 +66,7 @@
       name="company"
     />
     <div
-      class="d-flex"
+      class="d-flex btn-group"
     >
       <v-btn
         :disabled="!valid || sending"
@@ -96,7 +96,7 @@
       </v-file-input>
       <div
         v-if="inDialog"
-        class=" close-button form"
+        class="close-button form close-form-button"
       >
         <v-btn
           fab
@@ -271,9 +271,13 @@ form.order-form {
   }
 
   .attach-button {
+
     height: 56px;
     flex: 0 0 auto;
     position: relative;
+   @media only screen and (max-width: 768px) {
+    margin-left: 0!important;
+   }
     
     &.empty::before {
       content: "Приложить файлы";
@@ -288,7 +292,7 @@ form.order-form {
       position: absolute;
       margin: 0;
       height: 100%;
-      right: -4em;
+      right: -5em;
       width: 6em;
       background: #151d24;
       transition: 0.1s all 0.5s ease-out;
@@ -378,7 +382,13 @@ form.order-form {
       color: rgba(255, 255, 255, 0.5) !important;
     }
   }
-  
+  .close-form-button{
+    align-self: center;
+    // margin-top: 0.5em;
+    @media only screen and (max-width: 768px) {
+      align-self:flex-end
+    }
+  }
   div.close-button {
         
     .v-btn.view-button span {
@@ -394,6 +404,15 @@ form.order-form {
     padding-top: 0.5em  !important;
   }
 
+  .btn-group{
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    .order-button{
+      min-width:128px;
+      margin-bottom: 2em;
+    }
+  }
 
 }
 </style>
