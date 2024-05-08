@@ -1,6 +1,10 @@
 <template>
-  <div  v-if="videoMenu.length > 0"  class="video-menu">
+  <div  v-scroll="onScroll"
+  :class="{ hide: ($vuetify.breakpoint.sm || !$vuetify.breakpoint.xs ) && !hideIT}"
+  
+             v-if="videoMenu.length > 0"  class="video-menu">
     <v-menu
+ 
       z-index="0"
       bottom
       open-on-hover
@@ -71,12 +75,18 @@ export default {
   data() {
     return {
       toggled: false,
-      focused: false
+      focused: false,
+      hideIT: false,
     }
   },
   methods: {
     showVideo(title,srcMP4,srcWEBM,srcDescr,srcPoster) {
       this.$nuxt.$emit('open-dialog', 'video-modal', {title:title,src_webm: srcWEBM, src_mp4: srcMP4,description:srcDescr,poster:srcPoster})
+    },
+    onScroll (e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset ||   e.target.scrollTop || 0
+      this.hideIT = top < 50
     },
   },
   computed: {
@@ -155,6 +165,9 @@ a:active, a:focus, a:visited {
   .v-list-item__content, .v-list-item__title {
     overflow: visible;
   }
+}
+.hide{
+opacity: 0;
 }
 
 </style>
