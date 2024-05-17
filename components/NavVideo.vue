@@ -1,6 +1,7 @@
 <template>
+    <!-- :class="{ hide: ($vuetify.breakpoint.sm || !$vuetify.breakpoint.xs ) && !hideIT}" -->
   <div  v-scroll="onScroll"
-  :class="{ hide: ($vuetify.breakpoint.sm || !$vuetify.breakpoint.xs ) && !hideIT}"
+
   
              v-if="videoMenu.length > 0"  class="video-menu">
     <v-menu
@@ -17,7 +18,8 @@
           v-bind="attrs"
           v-on="on"
           class="video-toggle tuor andeTeal rounded-b-pill"
-        >
+          :class="{ hide: !hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }"
+          >
           <span
             class="d-md-none"
           >
@@ -124,6 +126,9 @@ div {
   z-index: 1;
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
+  opacity: 1;
+  transition: .4s all .2s ease-in;
+
 
 
 
@@ -168,6 +173,7 @@ a:active, a:focus, a:visited {
 }
 .hide{
 opacity: 0;
+pointer-events: none;
 }
 
 </style>
