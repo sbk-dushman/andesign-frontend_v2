@@ -16,9 +16,10 @@
         <transition name="fade">
         <div v-if="!asideOpen"
           v-bind="attrs"
-          v-on="on"
-          class="video-toggle tuor andeTeal rounded-b-pill"
-          :class="{ hide: !hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }"
+          v-on="on" 
+          class="video-toggle  tuor andeTeal rounded-b-pill"
+          :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
+
           >
           <span
             class="d-md-none"
@@ -44,6 +45,7 @@
         dense
         color="andeTeal"
         rounded
+        :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
         class="presentations-list tuor-list"
       >
         <v-list-item  @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)"
@@ -88,7 +90,7 @@ export default {
     onScroll (e) {
       if (typeof window === 'undefined') return
       const top = window.pageYOffset ||   e.target.scrollTop || 0
-      this.hideIT = top < 50
+      this.hideIT = top > 50
     },
   },
   computed: {
@@ -127,7 +129,7 @@ div {
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
   opacity: 1;
-  transition: .4s all .2s ease-in;
+  transition: .4s opacity  ease;
 
 
 
@@ -171,9 +173,6 @@ a:active, a:focus, a:visited {
     overflow: visible;
   }
 }
-.hide{
-opacity: 0;
-pointer-events: none;
-}
+
 
 </style>

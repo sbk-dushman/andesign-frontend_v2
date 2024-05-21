@@ -1,5 +1,7 @@
 <template>
-  <div class="" v-if="tourMenu.length > 0">
+  <div class="" v-if="tourMenu.length > 0"
+      v-scroll="onScroll"
+    >
     <v-menu 
     z-index="0"
       bottom
@@ -13,7 +15,8 @@
         <div v-if="!asideOpen"
           v-bind="attrs"
           v-on="on"
-          class="tuor-toggle tuor andeTeal rounded-b-pill"
+          :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
+          class="tuor-toggle nav-menu-base tuor andeTeal rounded-b-pill"
         >
           <span
             class="d-md-none"
@@ -110,7 +113,8 @@
         dense
         color="andeTeal"
         rounded
-        class="presentations-list tuor-list"
+        :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
+        class="presentations-list tuor-list nav-menu-base"
       >
         <v-list-item @click.stop.prevent="showTour(tour.url, tour.attr_title)"
           v-for="tour in tourMenu"
@@ -142,10 +146,16 @@ export default {
   data() {
     return {
       toggled: false,
-      focused: false
+      focused: false,
+      hideIT:true
     }
   },
   methods: {
+    onScroll (e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset ||   e.target.scrollTop || 0
+      this.hideIT = top > 50
+    },
     showTour(tuorUrl,attr_title ) {
       this.$nuxt.$emit('open-dialog', 'tour-modal', {src: tuorUrl, action_alert:attr_title})
     },
@@ -210,8 +220,10 @@ div {
     text-transform: uppercase;
     
   }
-}
+} 
+
 .tuor-list{
+
   max-width: 130px;
   @media only screen and (max-width: 960px) {
 

@@ -1,5 +1,8 @@
 <template>
-  <div class="presentation-menu">
+  <div class="presentation-menu"
+  v-scroll="onScroll"
+  >
+    
     <!--  slide-x-reverse-transition
     -bind:icon="'fa-solid' + (sortData.field != 'id' ? ' fa-sort' : (sortData.type == 'asc' ? ' fa-sort-up' : ' fa-sort-down'))"
          size="sm" color="#6c757d" class="me-1" />
@@ -21,7 +24,8 @@
         <div v-if="!asideOpen"
           v-bind="attrs"
           v-on="on"
-          class="presentations-toggle andeTeal rounded-b-pill"
+          :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
+          class="presentations-toggle nav-menu-base andeTeal rounded-b-pill"
         >
           <span 
             class="d-md-none "
@@ -45,7 +49,8 @@
         dense
         color="andeTeal"
         rounded
-        class="presentations-list"
+        :class="[{ hide: hideIT&&!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs }, 'nav-menu-base']"
+        class="presentations-list nav-menu-base"
       >
         <v-list-item
           v-for="page in pagesWithPresentations"
@@ -76,10 +81,18 @@ export default {
       default: false
     },
   },
+  methods: {
+    onScroll (e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset ||   e.target.scrollTop || 0
+      this.hideIT = top > 50
+    },
+  },
   data() {
     return {
       toggled: false,
-      focused: false
+      focused: false,
+      hideIT: false,
     }
   },
   computed: {

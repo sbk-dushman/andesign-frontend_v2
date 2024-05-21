@@ -378,5 +378,12 @@ span.descr {
   }
 }
 }
-
+.nav-menu-base{
+  transition: .4s opacity ease!important;
+  opacity: 1;
+}
+.hide{
+  opacity: 0 !important;
+  pointer-events: none!important;
+}
 </style>
