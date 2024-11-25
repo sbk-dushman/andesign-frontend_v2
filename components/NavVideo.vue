@@ -75,6 +75,11 @@ export default {
     type: Boolean,
     default: false
   },
+  formActive:  {
+    type: Boolean,
+    default: false
+  },
+  
 },
   data() {
     return {
@@ -83,6 +88,17 @@ export default {
       hideIT: false,
     }
   },
+  watch: {
+      formActive () {
+        if (this.formActive === false) {
+          this.hideIT = false;
+        }
+        if (this.formActive === true) {
+          this.hideIT = true;
+        }
+
+      },
+    },
   methods: {
     showVideo(title,srcMP4,srcWEBM,srcDescr,srcPoster) {
       this.$nuxt.$emit('open-dialog', 'video-modal', {title:title,src_webm: srcWEBM, src_mp4: srcMP4,description:srcDescr,poster:srcPoster})

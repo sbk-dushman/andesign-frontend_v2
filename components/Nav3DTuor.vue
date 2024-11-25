@@ -138,16 +138,22 @@ export default {
     prop: 'asideOpen',
   },
   props: {
+    formActive:  {
+    type: Boolean,
+    default: false
+  },
     asideOpen: {
       type: Boolean,
       default: false
     },
+
   },
   data() {
     return {
       toggled: false,
       focused: false,
-      hideIT:true
+      hideIT:false,
+      
     }
   },
   methods: {
@@ -165,7 +171,18 @@ export default {
  tourMenu() {
       return this.$store.state.tourMenu.filter((item)=> item.xfn==="on");;
     }
-  }
+  },
+  watch: {
+      formActive () {
+        if (this.formActive === false) {
+          this.hideIT = false;
+        }
+        if (this.formActive === true) {
+          this.hideIT = true;
+        }
+
+      },
+    },
 };
 </script>
 

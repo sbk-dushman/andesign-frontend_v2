@@ -80,7 +80,22 @@ export default {
       type: Boolean,
       default: false
     },
+    formActive:  {
+    type: Boolean,
+    default: false
   },
+  },
+  watch: {
+      formActive () {
+        if (this.formActive === false) {
+          this.hideIT = false;
+        }
+        if (this.formActive === true) {
+          this.hideIT = true;
+        }
+
+      },
+    },
   methods: {
     onScroll (e) {
       if (typeof window === 'undefined') return
