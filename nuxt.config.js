@@ -11,6 +11,10 @@ let dynamicRoutes = () => {
 export default {
   target: "static",
   components: true,
+  // serverMiddleware: [
+  //   { path: '/custom/v1/nuxt-build', handler: '~/middleware/rebuild.mjs' },
+  //   { path: '/custom/v1/nuxt-build/status', handler: '~/middleware/rebuild.mjs' }
+  // ],
   /*
    ** Headers of the page
    */
@@ -29,10 +33,12 @@ export default {
       { rel: "icon", type: "image/png", href: "/favico.png" }
     ]
   },
+ 
+  // ... остальная конфигурация
   vue: {
     config: {
-      productionTip: true,
-      devtools: false,
+      productionTip: false,
+      devtools: true,
     }
   },
   /*
@@ -54,7 +60,8 @@ export default {
     "~/plugins/dateformat.js",
     "~/plugins/ymapPlugin.js",
     "~/plugins/tourMenu.server.js",
-    "~/plugins/videoMenu.server.js"
+    "~/plugins/videoMenu.server.js",
+    "~/plugins/presentationsMenu.server.js"
     
   ],
   router: {

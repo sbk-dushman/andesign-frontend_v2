@@ -9,6 +9,7 @@ export const state = () => ({
   mainPage: [],
   tourMenu: [],
   videoMenu: [],
+  presentationsMenu:[]
 })
 
 export const mutations = {
@@ -30,6 +31,10 @@ export const mutations = {
   updateVideoMenu: (state, videoMenu) => {
     state.videoMenu = videoMenu
   },
+  updatePresentationsMenu: (state, presentationsMenu) => {
+    state.presentationsMenu = presentationsMenu
+  },
+  
   updateCategories: (state, categories) => {
     state.categories = categories
   },
@@ -128,6 +133,30 @@ export const actions = {
         }))
 
       commit("updateTourMenu", tourMenu)
+    } catch (err) {
+      console.log(err)
+    }
+  },
+  async   getPresentationsMenu ({ state, commit, dispatch }) {
+    if (state.presentationsMenu.length) return
+    try {
+      let presentationsMenu = await fetch(
+        `${siteURL}/wp-json/wp/v2/presentations-menu`
+      ).then(res => res.json())
+
+      presentationsMenu = presentationsMenu
+        .map(({ db_id, type_label, title, url , target, attr_title, description,xfn,}) => ({
+          db_id,
+          type_label,
+          title,
+          url,
+          target,
+          attr_title,
+          description,
+          xfn,
+        }))
+
+      commit("updatePresentationsMenu", presentationsMenu)
     } catch (err) {
       console.log(err)
     }

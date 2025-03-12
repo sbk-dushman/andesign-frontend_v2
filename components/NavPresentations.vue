@@ -53,14 +53,14 @@
         class="presentations-list nav-menu-base"
       >
         <v-list-item
-          v-for="page in pagesWithPresentations"
-          :key="page.id"
-          :href="page.acf.file"
+          v-for="presentation in Presentations"
+          :key="presentation.db_id"
+          :href="presentation.url"
           target="_blank"
           class="text-uppercase"
         >
           <span>
-            {{ page.title.rendered }}
+            {{ presentation.title }}
           </span>
         </v-list-item>
       </v-list>
@@ -111,8 +111,8 @@ export default {
     }
   },
   computed: {
-    pagesWithPresentations() {
-      return this.$store.state.pages.filter( page => page.acf.file )
+    Presentations() {
+      return this.$store.state.presentationsMenu;
     }
     
   }

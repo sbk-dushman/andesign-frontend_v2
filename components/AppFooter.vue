@@ -51,7 +51,7 @@
           <p
             class="copyright white--text d-none d-md-block"
           >
-            © ООО "ЭндиЗайн", 2003 - 2024
+            © ООО "ЭндиЗайн", 2003 - 2025
           </p>
         </v-col>
         <v-col
@@ -98,7 +98,7 @@
           <p
             class="copyright white--text d-block d-md-none mt-8"
           >
-            © ООО "ЭндиЗайн", 2003 - 2024
+            © ООО "ЭндиЗайн", 2003 - 2025
           </p>
         </v-col>
         <v-col
