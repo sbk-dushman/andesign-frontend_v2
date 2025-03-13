@@ -115,8 +115,6 @@ export default {
   },
   methods: {
     close() {
-      console.log();
-      // this.this.$refs.videoPlayer.$forceUpdate();
       this.$refs.videoPlayer.$destroy();
       this.$refs.videoPlayer.player.dispose(); 
      
