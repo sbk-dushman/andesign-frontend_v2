@@ -241,7 +241,7 @@ div {
 
 .tuor-list{
 
-  max-width: 130px;
+  max-width: 130px ;
   @media only screen and (max-width: 960px) {
 
     width: 108px;

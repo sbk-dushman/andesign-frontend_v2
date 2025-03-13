@@ -11,9 +11,9 @@
     <v-card>
       <v-card-text
         class="pt-4">
-        <keep-alive>
+        <!-- <keep-alive> -->
           <component   :is="componentName" :dark="dark" :inDialog="true" v-bind="dProps" :key="componentKey"></component>
-        </keep-alive>
+        <!-- </keep-alive> -->
       </v-card-text>
     </v-card>
   </v-dialog>
@@ -64,7 +64,8 @@ export default {
     })
     this.$nuxt.$on('close-dialog', (component) => {
       if (this.componentName == component) {
-        this.dialog = false
+        this.dialog = false;
+        console.log(this.be)
       }
     })
   }

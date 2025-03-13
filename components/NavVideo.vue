@@ -44,7 +44,7 @@
         <v-list-item  @click.stop.prevent="showVideo( video.title,video.url,video.attr_title,video.description,video.xfn)"
           v-for="video in videoMenu"
           :key="video.id"
-          class="text-uppercase"
+          class="text-uppercase video-list"
           href="#"
       
         >
@@ -121,7 +121,9 @@ div {
   height:27.5px;
   
 }
-
+.video-list{
+  max-width: 130px!important;
+}
 .video-toggle {
   display: flex;
     align-items: center;
@@ -134,6 +136,7 @@ div {
   padding: .5em 1em;
   min-width: 56px;
   width: 130px;
+  max-width: 130px;
   z-index: 1;
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;

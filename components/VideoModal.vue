@@ -9,12 +9,13 @@
             <source :src="src_mp4"
             type="video/mp4">
             </video> --> 
-            <VideoPlayer 
+            <VideoPlayer  ref="videoPlayer"
             :options="{    
                           autoplay: true,
                            controls: true,
                            loop:true,
                            width:800,
+                           height:800,
                             sources: [
                               {
                                 src:
@@ -99,9 +100,30 @@ export default {
         ]
       },
   },
+  mounted() {
+  
+  },
+  data() {
+    return {
+      player: null
+    }
+  },
+  beforeDestroy() {
+    if (this.player) {
+      this.player.dispose();
+    }
+  },
   methods: {
     close() {
-      return this.$nuxt.$emit('close-dialog', 'video-modal')
+      console.log();
+      // this.this.$refs.videoPlayer.$forceUpdate();
+      this.$refs.videoPlayer.$destroy();
+      this.$refs.videoPlayer.player.dispose(); 
+     
+      
+
+      return this.$nuxt.$emit('close-dialog', 'video-modal');
+     
     }
   }
 };
