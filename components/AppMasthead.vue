@@ -71,7 +71,7 @@
                   depressed
                   @click.stop="orderButton"
                   class="white--text view-button order-button"
-                ><span>Заказать</span></v-btn>
+                ><span>Связаться</span></v-btn>
               </v-sheet>
                <v-btn
                   large
@@ -80,7 +80,7 @@
                   depressed
                   @click.stop="orderButton"
                   class="white--text view-button order-button andeDarkOrange d-flex d-md-none"
-                ><span>Заказать</span></v-btn>
+                ><span>Связаться</span></v-btn>
             </v-col>
           </v-row>
           <v-row>

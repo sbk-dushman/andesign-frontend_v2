@@ -176,7 +176,7 @@ a:active, a:focus, a:visited {
 .presentations-list {
 
   padding: 4em 0 2em;
-
+  max-width: 150px;
   .v-list-item__content, .v-list-item__title {
     overflow: visible;
   }
